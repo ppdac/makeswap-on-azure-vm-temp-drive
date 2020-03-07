@@ -3,6 +3,11 @@
 #sdb is already mounted at /mnt so let's use it
 FILE=/mnt/swapfile
 
+#The parameter needs to exist.
+mkdir -p /var/local/makeswap-on-azure
+touch /var/local/makeswap-on-azure/swap_size
+echo 3333M > /var/local/makeswap-on-azure/swap_size
+
 # Set /var/local/makeswap-on-azure/swap_size to your desired size.
 # For example sudo su; echo 3600M > /var/local/makeswap-on-zure/swap_size; exit;
 # It can be something like:
