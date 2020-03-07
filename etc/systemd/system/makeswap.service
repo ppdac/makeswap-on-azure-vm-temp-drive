@@ -2,7 +2,7 @@
 Desscription=Makes a swap file on the volitile temporary drive
 
 [Service]
-ExecStart=/usr/bin/makeswap.sh
+ExecStart=/usr/local/bin/makeswap.sh
 Type=oneshot
 RemainAfterExit=yes
 
