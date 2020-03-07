@@ -22,8 +22,15 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 * systemctl disable makeswap-on-azure.service`
  
 # FYI
- 1. Value is hardcoded at 3.3 GB as I happen to use b size VMs, with 4 GB temp drives.
- 2. You will have to clone the souce and [change this value to suite your needs on this line](https://github.com/ppdac/makeswap-on-azure-vm-temp-drive/blob/fc21ca425556fc01f5fb93401c2c9f572cd0c466/usr/local/bin/makeswap.sh#L5).
- 
- # TODO 
- 1. Automate the chosen size before building the package. Feel free, please!
+Value is hardcoded at 3.3 GB as I happen to use b size VMs, with 4 GB temp drives.
+
+You can set your desired size by writing to `/var/local/makeswap-on-zure/swap_size`.
+
+For example:  
+`sudo su; echo 3600M > /var/local/makeswap-on-zure/swap_size; exit;`
+
+The value can be something like:
+   * 1024K
+   * 2048M
+   * 3.5G
+   * The default is 3333M
