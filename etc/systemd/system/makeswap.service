@@ -1,7 +1,8 @@
 [Unit]
-Desscription=Makes a swap file on the volitile temporary drive
+Description=Makes a swap file on the volitile temporary drive
 
 [Service]
+ExecStart=/bin/bash -c 'chmod ug+rx /usr/local/bin/makeswap.sh'
 ExecStart=/usr/local/bin/makeswap.sh
 Type=oneshot
 RemainAfterExit=yes

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILE=/mnt/swapfile
 if test -f "$FILE"; then
     echo "makeswap-on-azure-vm-tmp-drive: swapfile file alreaedy exists." >  /dev/kmsg

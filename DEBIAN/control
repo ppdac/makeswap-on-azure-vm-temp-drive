@@ -1,5 +1,5 @@
 Package: makeswap-on-azure-vm-temp-drive
-Version: 0.0-1
+Version: 0.0-2
 Section: base
 Priority: optional
 Architecture: amd64
