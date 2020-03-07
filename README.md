@@ -1,4 +1,4 @@
-# makeswap-on-azure-vm-temp-drive
+# makeswap-on-azure.service
 Ensures a swapfile exists or is created on the volatile temporary drive in an Azure VM.
 > **Temporary disk**
 >
