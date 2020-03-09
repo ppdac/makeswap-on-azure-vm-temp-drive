@@ -27,7 +27,7 @@ The swap size vale is hardcoded at 3333M, for no real reason other than I happen
 You can set your desired size by writing to this file`/var/local/makeswap-on-zure/swap_size`.
 
 For example:  
-`sudo su; echo 3600M > /var/local/makeswap-on-zure/swap_size; exit;`
+`sudo su; echo 3600M > /var/local/makeswap-on-azure/swap_size; exit;`
 
 The value can be something like:
    * 1024K
