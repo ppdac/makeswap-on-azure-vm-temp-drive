@@ -11,8 +11,8 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 
 # Installation
  1. Clone: `git clone https://github.com/ppdac/makeswap-on-azure.service.git`
- 2. Build deb: `dpkg-deb --build makeswap-on-azure`
- 3. Install the package: `dpkg -i makeswap-on-azure.deb`
+ 2. Build deb: `dpkg-deb --build makeswap-on-azure.service`
+ 3. Install the package: `dpkg -i makeswap-on-azure.service.deb`
  4. Kick off the service with one of these:
  	* Enable and reboot: `systemctl enable makeswap-on-azure.service`
 	* Or start and don't reboot: `systemctl start makeswap-on-azure.service`
