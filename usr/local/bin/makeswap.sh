@@ -22,7 +22,7 @@ else
 fi
 
 # Set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
-# For example sudo su; echo 3600M > /var/local/makeswap-on-zure/swap_size; exit;
+# For example sudo su; echo 3600M > /var/local/makeswap-on-azure/swap_size; exit;
 # It can be something like:
 # 1024K
 # 1024M
@@ -33,16 +33,19 @@ SWAP_SIZE=$(<$PARAMETER_FILE)
 
 #This writes do dmesg, but not enough.
 if test -f "$FILE"; then
+    #swap file exists, so remove it
     echo "makeswap-on-azure-vm-tmp-drive: swapfile file alreaedy exists." > /dev/kmsg
     swapoff $FILE
     rm $FILE
     echo "makeswap-on-azure-vm-tmp-drive: Deleted it." > /dev/kmsg
     
+    #recreate swapfile
     fallocate -l $SWAP_SIZE $FILE
     chmod 600 $FILE
     mkswap $FILE
     swapon $FILE
 else
+    #create swapfile for the first time
     fallocate -l $SWAP_SIZE $FILE
     chmod 600 $FILE
     mkswap $FILE
