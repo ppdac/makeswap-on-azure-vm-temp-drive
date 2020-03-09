@@ -3,6 +3,10 @@
 #sdb is already mounted at /mnt so let's use it
 FILE=/mnt/swapfile
 
+#clean up bug that made directory instead of file.
+if [ -d /var/local/makeswap-on-azure/swap_size ]; then
+    rm -rf /var/local/makeswap-on-azure/swap_size
+fi
 
 #The parameter needs to exist.
 PARAMETER_FILE=/var/local/makeswap-on-azure/swap_size
