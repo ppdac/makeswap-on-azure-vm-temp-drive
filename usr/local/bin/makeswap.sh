@@ -12,7 +12,7 @@ if test -f $PARAMETER_FILE; then
     SWAP_SIZE=$(<$PARAMETER_FILE)
 else
     #Otherwise make one with a reasonable value
-    mkdir -p $PARAMETER_FILE
+    mkdir -p /var/local/makeswap-on-azure/
     touch $PARAMETER_FILE
     echo 3333M > $PARAMETER_FILE
 fi
