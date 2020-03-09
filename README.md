@@ -10,7 +10,7 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 > [Azure Disk Storage overview for Linux VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json#temporary-disk)
 
 # Installation
- 1. Clone: `git clone https://github.com/ppdac/makeswap.service.git`
+ 1. Clone: `git clone https://github.com/ppdac/makeswap-on-azure.service.git`
  2. Build deb: `dpkg-deb --build makeswap-on-azure`
  3. Install the package: `dpkg -i makeswap-on-azure.deb`
  4. Kick off the service with one of these:
@@ -19,9 +19,9 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
  
 # Removal or Disable
 * `dpkg -r makeswap-on-azure.service`
-* systemctl disable makeswap-on-azure.service`
+* `systemctl disable makeswap-on-azure.service`
  
-# FYI
+# Usage
 The swap size vale is hardcoded at 3333M, for no real reason other than I happen to use b size VMs, with 4 GB temp drives.
 
 You can set your desired size by writing to this file`/var/local/makeswap-on-zure/swap_size`.
