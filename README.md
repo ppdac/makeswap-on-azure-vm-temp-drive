@@ -27,7 +27,8 @@ The swap size vale is hardcoded at 3333M, for no real reason other than I happen
 You can set your desired size by writing to this file`/var/local/makeswap-on-azure/swap_size`.
 
 For example:  
-`echo 3600M > /var/local/makeswap-on-azure/swap_size; exit;`
+`echo 3.75G > /var/local/makeswap-on-azure/swap_size`
+`systemctl restart makeswap-on-azure.service`
 
 The value can be something like:
    * 1024K
