@@ -22,7 +22,7 @@ else
 fi
 
 #https://github.com/ppdac/makeswap-on-azure.service/issues/3
-chmod ug+w $PARAMETER_FILE
+chmod ugo+w $PARAMETER_FILE
 
 # Set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
 # For example sudo su; echo 3600M > /var/local/makeswap-on-azure/swap_size; exit;
