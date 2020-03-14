@@ -24,11 +24,13 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 # Usage
 The swap size vale is hardcoded at 3333M, for no real reason other than I happen to use b size VMs, with 4 GB temp drives.
 
-You can set your desired size by writing to this file`/var/local/makeswap-on-azure/swap_size`.
+You can set your desired size by writing to this file `/var/local/makeswap-on-azure/swap_size`.
 
-For example:  
-`echo 3.75G > /var/local/makeswap-on-azure/swap_size`
-`systemctl restart makeswap-on-azure.service`
+For example:
+```
+echo 3.75G > /var/local/makeswap-on-azure/swap_size
+systemctl restart makeswap-on-azure.service
+```
 
 The value can be something like:
    * 1024K
