@@ -28,7 +28,7 @@ You can set your desired size by writing to this file `/var/local/makeswap-on-az
 
 For example:
 ```
-echo 3.75G > /var/local/makeswap-on-azure/swap_size
+echo 16G > /var/local/makeswap-on-azure/swap_size
 systemctl restart makeswap-on-azure.service
 ```
 
@@ -36,4 +36,4 @@ The value can be something like:
    * 1024K
    * 2048M
    * 3.5G
-   * The default is 3333M
+   * The default is 16G (half the size of a temporary ssd for Azure `/dev/sdb`s
