@@ -12,14 +12,14 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 # Installation
  1. Clone: `git clone https://github.com/ppdac/makeswap-on-azure.service.git`
  2. Build deb: `dpkg-deb --build makeswap-on-azure.service`
- 3. Install the package: `dpkg -i makeswap-on-azure.service.deb`
+ 3. Install the package: `sudo dpkg -i makeswap-on-azure.service.deb`
  4. Kick off the service with one of these:
- 	* Enable and reboot: `systemctl enable makeswap-on-azure.service`
-	* Or start and don't reboot: `systemctl start makeswap-on-azure.service`
+ 	* Enable and reboot: `sudo systemctl enable makeswap-on-azure.service`
+	* Or start and don't reboot: `sudo systemctl start makeswap-on-azure.service`
  
 # Removal or Disable
 * `dpkg -r makeswap-on-azure.service`
-* `systemctl disable makeswap-on-azure.service`
+* `sudo systemctl disable makeswap-on-azure.service`
  
 # Usage
 The swap size vale is hardcoded at 3333M, for no real reason other than I happen to use b size VMs, with 4 GB temp drives.
