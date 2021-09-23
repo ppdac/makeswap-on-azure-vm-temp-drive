@@ -29,7 +29,7 @@ You can set your desired size by writing to this file `/var/local/makeswap-on-az
 For example:
 ```
 echo 16G > /var/local/makeswap-on-azure/swap_size
-systemctl restart makeswap-on-azure.service
+sudo systemctl restart makeswap-on-azure.service
 ```
 
 The value can be something like:
