@@ -1,9 +1,9 @@
 Package: makeswap-on-azure
-Version: 1.0.1
+Version: 1.0.2
 Section: base
 Priority: optional
 Architecture: amd64
-Maintainer: Louis Waweru (law2175@columbia.edu)
+Maintainer: Louis Waweru (louis@waweru.me)
 Description: Ensures a swapfile is created on Azure VM offering volitile temporary disk
  Temporary disk
  Every VM contains a temporary disk, which is not a managed disk.
