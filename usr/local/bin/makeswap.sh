@@ -19,9 +19,9 @@ else
     mkdir -p /var/local/makeswap-on-azure/
     touch $PARAMETER_FILE
     freespace=$(df -h | grep sdb1 | awk '{print $4+0}')
-    if [ $freespace -gt 16 ];
+    if [ $freespace -gt 4 ];
     then
-    echo 16G > $PARAMETER_FILE
+    echo 2G > $PARAMETER_FILE
     fi
 fi
 
@@ -34,7 +34,7 @@ chmod ugo+w $PARAMETER_FILE
 # 1024K
 # 1024M
 # 3.5G
-# The default is 16G
+# The default is 2G
 SWAP_SIZE=$(<$PARAMETER_FILE)
 
 
