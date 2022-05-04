@@ -1,4 +1,4 @@
-[![CI](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/blank.yml/badge.svg)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/blank.yml)
+[![Deploy: Ubuntu (latest)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy.yml/badge.svg)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy.yml)
 
 # makeswap-on-azure.service
 Ensures a swapfile exists or is created on the volatile temporary drive in an Azure VM.
