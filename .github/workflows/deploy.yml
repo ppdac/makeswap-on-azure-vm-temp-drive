@@ -30,4 +30,4 @@ jobs:
           dpkg-deb --build makeswap-on-azure.service
           
           #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
-          test -f /mnt/swapfile && echo 0 || echo 1
+          test -f /mnt/swapfile && exit 0 || exit 1
