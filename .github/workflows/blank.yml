@@ -30,4 +30,4 @@ jobs:
         run: |
           git clone https://github.com/ppdac/makeswap-on-azure.service.git
           dpkg-deb --build makeswap-on-azure.service
-          test -f /mnt/swapfilea && return 0 || return 1
+          test -f /mnt/swapfile && return 0 || return 1
