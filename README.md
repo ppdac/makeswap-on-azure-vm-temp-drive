@@ -38,5 +38,3 @@ The value can be something like:
    * 1024K
    * 2048M
    * 3.5G
-   * The default is 4G, usually on  `/dev/sdb`s
-   * No swap will be created be default, if the volitile drive is 4 GB or less. You must override.
