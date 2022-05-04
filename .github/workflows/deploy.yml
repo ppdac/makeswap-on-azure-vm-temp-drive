@@ -29,5 +29,6 @@ jobs:
           cd /home/runner/work/makeswap-on-azure.service
           dpkg-deb --build makeswap-on-azure.service
           
+          cat /var/log/syslog | grep makeswap
           #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
           test -f /mnt/swapfile && echo 0 || echo 1
