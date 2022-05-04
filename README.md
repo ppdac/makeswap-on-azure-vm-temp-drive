@@ -24,13 +24,13 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 * `sudo systemctl disable makeswap-on-azure.service`
  
 # Usage
-The swap size vale is hardcoded at 3333M, for no real reason other than I happen to use b size VMs, with 4 GB temp drives.
+The swap size is dynamically determined, loosely based around the table on the [Ubuntu SwapSize FAQ](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F).
 
 You can set your desired size by writing to this file `/var/local/makeswap-on-azure/swap_size`.
 
 For example:
 ```
-echo 16G > /var/local/makeswap-on-azure/swap_size
+echo 1G > /var/local/makeswap-on-azure/swap_size
 sudo systemctl restart makeswap-on-azure.service
 ```
 
