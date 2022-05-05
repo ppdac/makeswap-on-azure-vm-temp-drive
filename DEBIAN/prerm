@@ -9,4 +9,4 @@ rm $swapFile
 echo "makeswap-on-azure: Removed." > /dev/kmsg
 
 rm -rf $parameterFileDir
-echo "makeswap-on-azure: Paremeter file removed.\nCleaup complete."
+echo "makeswap-on-azure: Parameter file removed.\nCleaup complete."
