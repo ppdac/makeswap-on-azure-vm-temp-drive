@@ -1,0 +1,12 @@
+#/bin/bash
+
+swapFile=/mnt/swapfile
+parameterFileDir = "/var/local/makeswap-on-azure"
+
+echo "makeswap-on-azure: swap file file alreaedy exists." > /dev/kmsg
+swapoff $swapFile
+rm $swapFile
+echo "makeswap-on-azure: Removed." > /dev/kmsg
+
+rm -rf $parameterFileDir
+echo "makeswap-on-azure: Paremeter file removed.\nCleaup complete."
