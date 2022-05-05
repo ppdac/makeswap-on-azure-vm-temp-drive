@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#sdb is already mounted at /mnt so let's use it
 swapFile=/mnt/swapfile
 
 # Use the value from the parameter file if it exists
 # You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
-parameterFile = "/var/local/makeswap-on-azure/swap_size"
+parameterFile=/var/local/makeswap-on-azure/swap_size
+swapSize=0
 
 if test -f $parameterFile; then
     swapSize=$(<$parameterFile)

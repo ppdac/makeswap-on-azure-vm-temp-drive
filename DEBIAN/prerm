@@ -1,7 +1,7 @@
 #/bin/bash
 
 swapFile=/mnt/swapfile
-parameterFileDir = "/var/local/makeswap-on-azure"
+parameterFileDir=/var/local/makeswap-on-azure
 
 echo "makeswap-on-azure: swap file file alreaedy exists." > /dev/kmsg
 swapoff $swapFile
