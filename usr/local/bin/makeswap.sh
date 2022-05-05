@@ -38,7 +38,7 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
     echo "makeswap-on-azure: Total of ${memTotal}kB RAM." > /dev/kmsg
 
     # Fork me ¯\_(ツ)_/¯  
-    if [ $freeDiskSpace -gt 4 ]; then
+    if [ $freeDiskSpace -ge 1 ]; then
         if [ $memTotal -lt 500000 ]; then
             echo 512MB > $parameterFile
         elif [ $memTotal -le 1000000 ]; then
