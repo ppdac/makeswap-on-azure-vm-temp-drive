@@ -1,6 +1,6 @@
 #!/bin/bash
 
-swapFile=/mnt/swapfile
+swapFile=/mnt/pagefile
 
 # Use the value from the parameter file if it exists
 # You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
@@ -61,8 +61,7 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
             echo 32G > $parameterFile
         fi
     fi
-    
-    swapSize=$(<$parameterFile)
+
     echo "makeswap-on-azure: New swap size is now $(cat $parameterFile)." > /dev/kmsg
 fi
 
@@ -70,7 +69,7 @@ fi
 chmod ugo+w $parameterFile
 
 # Finally swapon
-if test -f "$swapFile"; then
+if test -f $swapFile; then
     #swap file exists, so remove it
     echo "makeswap-on-azure: swap file file alreaedy exists." > /dev/kmsg
     swapoff $swapFile
