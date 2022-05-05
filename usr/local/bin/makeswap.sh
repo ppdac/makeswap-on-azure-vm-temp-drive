@@ -62,6 +62,7 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
             echo 32G > $parameterFile
         fi
     fi
+    swapSize=$parameterFile
     echo "makeswap-on-azure: New swap size is now $(cat $parameterFile)." > /dev/kmsg
 fi
 
