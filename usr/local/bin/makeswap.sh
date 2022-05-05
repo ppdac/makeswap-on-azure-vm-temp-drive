@@ -22,7 +22,7 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
     mkdir -p /var/local/makeswap-on-azure
     touch $parameterFile
     freeDiskSpace=$(df -h | grep /mnt | awk '{print $4+0}')
-    if [ $freeDiskSpace -gt 0 ]; then
+    if [[ ! -z $freeDiskSpace ]]; then
         echo "makeswap-on-azure: ${freeDiskSpace}G available disk space on temdrive." > /dev/kmsg
     else
         echo "makeswap-on-azure: ${freeDiskSpace}G is not enough to proceed. Please free up some space on /dev/sdb1."
