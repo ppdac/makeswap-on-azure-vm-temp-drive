@@ -1,10 +1,12 @@
 #!/bin/bash
 
 #sdb is already mounted at /mnt so let's use it
-FILE=/mnt/swapfile
+swapFile=/mnt/swapfile
 
 # Use the value from the parameter file if it exists
 # You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
+parameterFile = "/var/local/makeswap-on-azure/swap_size"
+
 if test -f $parameterFile; then
     swapSize=$(<$parameterFile)
     echo "makeswap-on-azure: Found $parameterFile." > /dev/kmsg
@@ -55,32 +57,31 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
             echo 32G > $parameterFile
         fi
     fi
-
     echo "makeswap-on-azure: New swap size is now $(cat $parameterFile)." > /dev/kmsg
 fi
 
 # https://github.com/ppdac/makeswap-on-azure.service/issues/3
-chmod ugo+w $PARAMETER_FILE
+chmod ugo+w $parameterFile
 
 # Finally swapon
-if test -f "$FILE"; then
+if test -f "$swapFile"; then
     #swap file exists, so remove it
     echo "makeswap-on-azure: swap file file alreaedy exists." > /dev/kmsg
-    swapoff $FILE
-    rm $FILE
-    echo "makeswap-on-azure: Deleted it." > /dev/kmsg
+    swapoff $swapFile
+    rm $swapFile
+    echo "makeswap-on-azure: Removed." > /dev/kmsg
     
     #recreate swapfile
-    fallocate -l $swapSize $FILE
-    chmod 600 $FILE
-    mkswap $FILE
-    swapon $FILE
+    fallocate -l $swapSize $swapFile
+    chmod 600 $swapFile
+    mkswap $swapFile
+    swapon $swapFile
     echo "makeswap-on-azure: Recreated ${swapSize}G swapfile." > /dev/kmsg
 else
     #create swapfile for the first time
-    fallocate -l $swapSize $FILE
-    chmod 600 $FILE
-    mkswap $FILE
-    swapon $FILE
+    fallocate -l $swapSize $swapFile
+    chmod 600 $swapFile
+    mkswap $swapFile
+    swapon $swapFile
     echo "makeswap-on-azure: New ${swapSize}G swapfile created." > /dev/kmsg
 fi  
