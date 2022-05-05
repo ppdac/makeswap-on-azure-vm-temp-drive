@@ -21,8 +21,13 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
 
     mkdir -p /var/local/makeswap-on-azure
     touch $parameterFile
+
     freeDiskSpace=$(df -h | grep /mnt | awk '{print $4+0}')
-    if [[ ! -z $freeDiskSpace ]]; then
+
+    #round hack
+    freeDiskSpace=$(echo $freeDiskSpace | awk '{print int($1+0.5)}')
+
+    if [ $freeDiskSpace -gt 0 ]; then
         echo "makeswap-on-azure: ${freeDiskSpace}G available disk space on temdrive." > /dev/kmsg
     else
         echo "makeswap-on-azure: ${freeDiskSpace}G is not enough to proceed. Please free up some space on /dev/sdb1."
@@ -33,7 +38,7 @@ if ! test -f $parameterFile || [ -z $swapSize ]; then
     memTotal=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
     echo "makeswap-on-azure: Total of ${memTotal}kB RAM." > /dev/kmsg
 
-    # Fork me ¯\_(ツ)_/¯
+    # Fork me ¯\_(ツ)_/¯  
     if [ $freeDiskSpace -gt 4 ]; then
         if [ $memTotal -lt 500000 ]; then
             echo 512MB > $parameterFile
