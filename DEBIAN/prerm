@@ -1,12 +1,27 @@
 #/bin/bash
 
-swapFile=/mnt/swapfile
-parameterFileDir=/var/local/makeswap-on-azure
+swapFile="/mnt/swapfile"
+parameterFileDir="/var/local/makeswap-on-azure"
 
-echo "makeswap-on-azure: swap file file alreaedy exists." > /dev/kmsg
 swapoff $swapFile
+if (($? == 0)); then
+    echo "[makeswap-on-azure]: Swap file disabled." > /dev/kmsg
+else
+    echo "[makeswap-on-azure]: Failed to disable swap file." > /dev/kmsg
+fi
+
 rm $swapFile
-echo "makeswap-on-azure: Removed." > /dev/kmsg
+if (($? == 0)); then
+    echo "[makeswap-on-azure]: Swap file removed." > /dev/kmsg
+else
+    echo "[makeswap-on-azure]: Failed to remove swap file." > /dev/kmsg
+fi
 
 rm -rf $parameterFileDir
-echo "makeswap-on-azure: Parameter file removed.\nCleaup complete."
+if (($? == 0)); then
+    echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
+else
+    echo "[makeswap-on-azure]: Failed to remove parameter file directory." > /dev/kmsg
+fi
+
+echo "[makeswap-on-azure]: Cleaup complete." > /dev/kmsg
