@@ -28,26 +28,26 @@ jobs:
         run: |
           cd /home/runner/work/makeswap-on-azure.service
           dpkg-deb --build makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
 
           sudo dpkg --install  makeswap-on-azure.service.deb
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
 
           sudo systemctl enable makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
 
           sudo systemctl start makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
           systemctl status makeswap-on-azure.service"
-          journalctl -xe
-          
+          journalctl -xe --no-pager
+
           #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
           if [ ! -f /mnt/pagefile ]; then exit 1; fi
 
           sudo systemctl disable makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
 
           sudo dpkg --remove makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe; fi
+          if (($? != 0 )); then journalctl -xe --no-pager; fi
 
           if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
