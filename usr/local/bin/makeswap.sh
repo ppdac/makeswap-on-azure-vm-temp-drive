@@ -23,7 +23,7 @@ commit_swap() {
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$parameterFile"
     local swapSize=$(cat $parameterFile)
-    fallocate -l "$swapSize $swapFile"
+    fallocate -l $swapSize $swapFile
     if (($? == 0)); then
         logger = "Allocated $swapSize for $swapFile"
     else
@@ -128,7 +128,7 @@ calculate_swap_size() {
 
 main() {
     local filesystem=$(df | grep /mnt | gawk '{print $1}')
-    
+
     if [ -f "$parameterFile" ]; then
         logger "Found $parameterFile."
         if [[ ! -z $parameterFile ]]; then
