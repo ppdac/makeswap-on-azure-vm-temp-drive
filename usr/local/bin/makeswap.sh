@@ -86,7 +86,7 @@ calculate_swap_size() {
 
     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
     local freeDiskSpace=$(df | grep /mnt | gawk '{print int($4/1024)}')
-    logger "$freeDiskSpace megabyes available on $filesystem(rounding down for safety)."
+    logger "$freeDiskSpace megabyes available on $filesystem (rounding down for safety)."
 
     if [ $freeDiskSpace -gt 0 ]; then
         logger "${freeDiskSpace}M available disk space on $filesystem."
