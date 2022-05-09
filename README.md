@@ -21,6 +21,7 @@ git clone https://github.com/ppdac/makeswap-on-azure.service.git
 dpkg-deb --build makeswap-on-azure.service
 sudo dpkg -i makeswap-on-azure.service.deb
 ```
+
 ### Enable and start service
 ```
 sudo systemctl enable makeswap-on-azure.service
@@ -28,11 +29,14 @@ sudo systemctl start makeswap-on-azure.service
 ```
 
 ## Uninstall
-### Disable and/or uninstall
 ```
 sudo systemctl disable makeswap-on-azure.service 
 sudo dpkg -r makeswap-on-azure.service
 ```
+
+## Upgrade
+ - Uninstall
+ - Install
 
 ## Adjust size of virtual memory
 The amount of virtual memory is dynamically determined, loosely based around the table on the [Ubuntu SwapSize FAQ](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F).

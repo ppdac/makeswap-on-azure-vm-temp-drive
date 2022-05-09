@@ -18,7 +18,7 @@ if [ -f "$swapFile" ]; then
     fi
 fi
 
-if [ -d $parameterFileDir ]
+if [ -d $parameterFileDir ]; then
     rm -rf $parameterFileDir
     if (($? == 0)); then
         echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
