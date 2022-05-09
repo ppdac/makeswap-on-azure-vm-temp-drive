@@ -19,11 +19,7 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 mkdir ~/git && cd ~/git
 git clone https://github.com/ppdac/makeswap-on-azure.service.git
 dpkg-deb --build makeswap-on-azure.service
-sudo dpkg -i makeswap-on-azure.service.deb
-```
-
-### Enable and start service
-```
+sudo dpkg --install makeswap-on-azure.service.deb
 sudo systemctl enable makeswap-on-azure.service
 sudo systemctl start makeswap-on-azure.service
 ```
@@ -31,7 +27,7 @@ sudo systemctl start makeswap-on-azure.service
 ## Uninstall
 ```
 sudo systemctl disable makeswap-on-azure.service 
-sudo dpkg -r makeswap-on-azure.service
+sudo dpkg --remove makeswap-on-azure.service
 ```
 
 ## Upgrade
