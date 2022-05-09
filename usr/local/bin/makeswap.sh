@@ -3,8 +3,15 @@
 # Creates swap file on the temp drive
 
 # Use the value from the parameter file if it exists
+<<<<<<< Updated upstream
 # You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
 readonly PARAMETER_FILE='/var/local/makeswap-on-azure/swap_size'
+=======
+# You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
+# See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
+readonly CONFIG_DIR='/etc/makeswap-on-azure'
+readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
+>>>>>>> Stashed changes
 readonly SWAP_FILE='/mnt/pagefile'
 
 # Usage: logger "This will be logged."
@@ -163,8 +170,13 @@ main() {
     if [ -f "$PARAMETER_FILE" ]; then
         logger "Found $PARAMETER_FILE."
         if [[ ! -z $PARAMETER_FILE ]]; then
+<<<<<<< Updated upstream
             # Set the size of swap using the value stored in /var/local/makeswap-on-azure/swap_size
             local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+=======
+            # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
+            readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+>>>>>>> Stashed changes
             logger "Set the swap size to $SWAP_SIZE"
         else
             err "$PARAMETER_FILE is not set."
@@ -192,20 +204,20 @@ main() {
             logger "Removing a swap file that is already present."
             remove_swap
             if (($? != 0)); then
-                err "Failed to remove existing swap file."
+                err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
             fi
         fi
 
         logger "Calulating appropriate swap size."
         calculate_swap_size
         if (($? != 0)); then
-            err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure"
+            err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
         fi
     fi
 
     commit_swap
     if (($? != 0)); then
-        err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure"
+        err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%202"
     fi
 }
 

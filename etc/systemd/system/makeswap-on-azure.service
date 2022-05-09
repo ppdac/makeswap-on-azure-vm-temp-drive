@@ -1,11 +1,16 @@
 # Required by systemd for interpretation of service operation.
 
 [Unit]
-Description=Makes a swap file on the volitile temporary drive
+Description=Makes a swap file on the volitile temp drive
 
 [Service]
+<<<<<<< Updated upstream
 ExecStart=/bin/bash -c 'chmod ug+rx /usr/local/bin/makeswap.sh'
 ExecStart=/usr/local/bin/makeswap.sh
+=======
+ExecStartPre=+chmod ug+rx /usr/sbin/makeswap.sh
+ExecStart=+/usr/sbin/makeswap.sh
+>>>>>>> Stashed changes
 Type=oneshot
 RemainAfterExit=yes
 

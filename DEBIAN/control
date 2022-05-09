@@ -1,13 +1,15 @@
 Package: makeswap-on-azure
-Version: 1.2.3
+Version: 1.2.4
 Priority: optional
 Architecture: amd64
 Depends: gawk (>= 3.1.8)
 Maintainer: Louis Waweru (@soyfrien)
-Description: Ensures a swapfile is created on temp disk bundled with Azure VM.
- Every VM contains a temporary disk, which is not a managed disk.
- The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files.
- Data on the temporary disk may be lost during a maintenance event event or when you redeploy a VM.
- On Azure Linux VMs, the temporary disk is /dev/sdb by default and on Windows VMs the temporary disk is D: by default.
- During a successful standard reboot of the VM, the data on the temporary disk will persist.
- https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview
+Description: Ensures a swapfile is created on temp disk bundled with Azure VM. 
+Every VM contains a temporary disk, which is not a managed disk. The temporary 
+disk provides short-term storage for applications and processes and is intended 
+to only store data such as page or swap files. Data on the temporary disk may 
+be lost during a maintenance event event or when you redeploy a VM. On Azure 
+Linux VMs, the temporary disk is /dev/sdb by a default and on Windows VMs the 
+temporary disk is D: by default. During a successful standard reboot of the VM, 
+the data on the temporary  disk will persist. 
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview

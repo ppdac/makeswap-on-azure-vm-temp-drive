@@ -13,7 +13,7 @@ A clear and concise description of what the bug is.
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Build .deb
-2. Run `dpkg -I`
+2. Run `dpkg --install`
 3. See error
 
 **Expected behavior**

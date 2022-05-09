@@ -2,9 +2,14 @@
 #
 # Runs when dpkg --remove makeswap-on-azure.service is called
 # Removes configuration file and swap file, if present
-
+readonly DEPRECATED_DIR_A="/var/local/makeswap-on-azure"
+readonly DEPRECATED_DIR_B="/usr/local/etc/makeswap-on-azure"
 readonly SWAP_FILE="/mnt/pagefile"
+<<<<<<< Updated upstream
 readonly PARAMETER_FILE_DIR="/var/local/makeswap-on-azure"
+=======
+readonly PARAMETER_FILE_DIR="/etc/makeswap-on-azure"
+>>>>>>> Stashed changes
 
 # Usage: logger "This will be logged."
 logger() {
@@ -39,5 +44,23 @@ if [ -d $PARAMETER_FILE_DIR ]; then
         echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
     else
         echo "[makeswap-on-azure]: Failed to remove parameter file directory." > /dev/kmsg
+    fi
+fi
+
+if [ -d $DEPRECATED_DIR_A ]; then
+    rm -rf $DEPRECATED_DIR_A
+    if (($? == 0)); then
+        logger "Oringal parameter file directory removed."
+    else
+        logger "Failed to remove original parameter file directory."
+    fi
+fi
+
+if [ -d $DEPRECATED_DIR_B ]; then
+    rm -rf $DEPRECATED_DIR_B
+    if (($? == 0)); then
+        logger "Former parameter file directory removed."
+    else
+        logger "Failed to remove former parameter file directory."
     fi
 fi
