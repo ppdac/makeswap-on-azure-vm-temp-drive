@@ -22,7 +22,7 @@ err() {
 commit_swap() {
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$parameterFile"
-
+    local swapSize=$(cat $parameterFile)
     fallocate -l "$swapSize $swapFile"
     if (($? == 0)); then
         logger = "Allocated $swapSize for $swapFile"
@@ -79,11 +79,11 @@ calculate_swap_size() {
     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
     # lop off decimals with int(float)
-    memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
+    local memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
     logger "Total RAM: ${memTotal}M."
 
     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
-    freeDiskSpace=$(df | grep /mnt | gawk '{print int($4/1024)}')
+    local freeDiskSpace=$(df | grep /mnt | gawk '{print int($4/1024)}')
     logger "$freeDiskSpace megabyes available on $filesystem(rounding down for safety)."
 
     if [ $freeDiskSpace -gt 0 ]; then
@@ -128,12 +128,12 @@ calculate_swap_size() {
 
 main() {
     local filesystem=$(df | grep /mnt | gawk '{print $1}')
-
+    
     if [ -f "$parameterFile" ]; then
         logger "Found $parameterFile."
         if [[ ! -z $parameterFile ]]; then
             # Set the size of swap using the value stored in /var/local/makeswap-on-azure/swap_size
-            swapSize=$(<$parameterFile)
+            swapSize=$(cat $parameterFile)
             logger "Set the swap size to $swapSize"
         else
             err "$parameterFile is not set."
