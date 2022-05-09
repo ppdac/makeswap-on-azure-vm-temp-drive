@@ -1,3 +1,5 @@
+# Required by systemd for interpretation of service operation.
+
 [Unit]
 Description=Makes a swap file on the volitile temporary drive
 

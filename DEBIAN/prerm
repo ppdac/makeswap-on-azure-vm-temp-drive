@@ -1,16 +1,31 @@
 #/bin/bash
+#
+# Runs when dpkg --remove makeswap-on-azure.service is called
+# Removes configuration file and swap file, if present
 
-swapFile="/mnt/pagefile"
-parameterFileDir="/var/local/makeswap-on-azure"
-if [ -f "$swapFile" ]; then
-    swapoff $swapFile
+readonly SWAP_FILE="/mnt/pagefile"
+readonly PARAMETER_FILE_DIR="/var/local/makeswap-on-azure"
+
+# Usage: logger "This will be logged."
+logger() {
+    echo "[makeswap-on-azure]: $*" >&1
+}
+
+# Usage: err "This is sent to STDERR before returning 1 on exit."
+err() {
+    echo "[makeswap-on-azure]: $*" >&2
+    exit 1
+}
+
+if [ -f "$SWAP_FILE" ]; then
+    swapoff $SWAP_FILE
     if (($? == 0)); then
         echo "[makeswap-on-azure]: Swap file disabled." > /dev/kmsg
     else
         echo "[makeswap-on-azure]: Failed to disable swap file." > /dev/kmsg
     fi
 
-    rm $swapFile
+    rm $SWAP_FILE
     if (($? == 0)); then
         echo "[makeswap-on-azure]: Swap file removed." > /dev/kmsg
     else
@@ -18,8 +33,8 @@ if [ -f "$swapFile" ]; then
     fi
 fi
 
-if [ -d $parameterFileDir ]; then
-    rm -rf $parameterFileDir
+if [ -d $PARAMETER_FILE_DIR ]; then
+    rm -rf $PARAMETER_FILE_DIR
     if (($? == 0)); then
         echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
     else
