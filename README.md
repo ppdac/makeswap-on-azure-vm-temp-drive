@@ -17,7 +17,7 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 ### Clone, build and install
 ```
 mkdir ~/git && cd ~/git
-git clone https://github.com/ppdac/makeswap-on-azure.service.git
+git clone --bare https://github.com/ppdac/makeswap-on-azure.service.git
 dpkg-deb --build makeswap-on-azure.service
 sudo dpkg -i makeswap-on-azure.service.deb
 ```

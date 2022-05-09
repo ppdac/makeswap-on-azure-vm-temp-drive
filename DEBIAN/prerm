@@ -2,26 +2,27 @@
 
 swapFile="/mnt/pagefile"
 parameterFileDir="/var/local/makeswap-on-azure"
+if [ -f "$swapFile" ]; then
+    swapoff $swapFile
+    if (($? == 0)); then
+        echo "[makeswap-on-azure]: Swap file disabled." > /dev/kmsg
+    else
+        echo "[makeswap-on-azure]: Failed to disable swap file." > /dev/kmsg
+    fi
 
-swapoff $swapFile
-if (($? == 0)); then
-    echo "[makeswap-on-azure]: Swap file disabled." > /dev/kmsg
-else
-    echo "[makeswap-on-azure]: Failed to disable swap file." > /dev/kmsg
+    rm $swapFile
+    if (($? == 0)); then
+        echo "[makeswap-on-azure]: Swap file removed." > /dev/kmsg
+    else
+        echo "[makeswap-on-azure]: Failed to remove swap file." > /dev/kmsg
+    fi
 fi
 
-rm $swapFile
-if (($? == 0)); then
-    echo "[makeswap-on-azure]: Swap file removed." > /dev/kmsg
-else
-    echo "[makeswap-on-azure]: Failed to remove swap file." > /dev/kmsg
+if [ -d $parameterFileDir ]
+    rm -rf $parameterFileDir
+    if (($? == 0)); then
+        echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
+    else
+        echo "[makeswap-on-azure]: Failed to remove parameter file directory." > /dev/kmsg
+    fi
 fi
-
-rm -rf $parameterFileDir
-if (($? == 0)); then
-    echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
-else
-    echo "[makeswap-on-azure]: Failed to remove parameter file directory." > /dev/kmsg
-fi
-
-echo "[makeswap-on-azure]: Cleaup complete." > /dev/kmsg
