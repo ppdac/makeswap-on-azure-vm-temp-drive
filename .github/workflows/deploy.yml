@@ -28,9 +28,13 @@ jobs:
         run: |
           cd /home/runner/work/makeswap-on-azure.service
           dpkg-deb --build makeswap-on-azure.service
-          dpkg --install  makeswap-on-azure.service.deb
-          systemctl enable makeswap-on-azure.service
-          systemctl start makeswap-on-azure.service
+          sudo dpkg --install  makeswap-on-azure.service.deb
+          sudo systemctl enable makeswap-on-azure.service
+          sudo systemctl start makeswap-on-azure.service
 
           #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
-          if [ -f /mnt/pagefile ]; then exit 0; else exit 1; fi
+          if [ ! -f /mnt/pagefile ]; then exit 1; fi
+
+          sudo systemctl disable makeswap-on-azure.service
+          sudo dpkg --remove makeswap-on-azure.service
+          if [ ! -f /mnt/pagefile ]; then exit 0; else exit 1; fi
