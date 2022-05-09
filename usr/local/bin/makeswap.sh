@@ -25,7 +25,7 @@ commit_swap() {
     local swapSize=$(cat $parameterFile)
     fallocate -l $swapSize $swapFile
     if (($? == 0)); then
-        logger = "Allocated $swapSize for $swapFile"
+        logger "Allocated $swapSize for $swapFile"
     else
         err "Failed to allocate $swapSize to $swapFile"
     fi
