@@ -23,11 +23,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Build and Install
+      # Checks if 
+      - name: Build and install, then check if the pagefile was created.
         run: |
           cd /home/runner/work/makeswap-on-azure.service
           dpkg-deb --build makeswap-on-azure.service
-          
+          dpkg --install  makeswap-on-azure.service.deb
+          systemctl enable makeswap-on-azure.service
+          systemctl start makeswap-on-azure.service
+
           #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
-          test -f /mnt/swapfile && exit 0 || exit 1
+          if [ -f /mnt/pagefile ]; then exit 0; else exit 1; fi
