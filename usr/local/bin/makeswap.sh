@@ -15,7 +15,7 @@ logger() {
 # STDERR logging function
 err() {
     echo "[makeswap-on-azure]: $*" >&2
-    esit 1
+    exit 1
 }
 
 # Allocates disk space, creates swap file and enables it
