@@ -26,26 +26,30 @@ jobs:
       # Checks if 
       - name: Build and install, then check if the pagefile was created.
         run: |
-          cd /home/runner/work/makeswap-on-azure.service
-          dpkg-deb --build makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager; fi
+            whois github.com | grep refer
+            df -h
+            
+        # run: |
+        #   cd /home/runner/work/makeswap-on-azure.service
+        #   dpkg-deb --build makeswap-on-azure.service
+        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
 
-          sudo dpkg --install  makeswap-on-azure.service.deb
-          if (($? != 0 )); then journalctl -xe --no-pager; fi
+        #   sudo dpkg --install  makeswap-on-azure.service.deb
+        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
 
-          sudo systemctl enable makeswap-on-azure.service
-          journalctl -xe --no-pager
+        #   sudo systemctl enable makeswap-on-azure.service
+        #   journalctl -xe --no-pager
 
-          sudo systemctl start makeswap-on-azure.service
-          journalctl -xe --no-pager
+        #   sudo systemctl start makeswap-on-azure.service
+        #   journalctl -xe --no-pager
 
-          #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
-          if [ ! -f /mnt/pagefile ]; then exit 1; fi
+        #   #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
+        #   if [ ! -f /mnt/pagefile ]; then exit 1; fi
 
-          sudo systemctl disable makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager; fi
+        #   sudo systemctl disable makeswap-on-azure.service
+        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
 
-          sudo dpkg --remove makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager; fi
+        #   sudo dpkg --remove makeswap-on-azure.service
+        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
 
-          if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
+        #   if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
