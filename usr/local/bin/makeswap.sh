@@ -76,6 +76,8 @@ fi
 }
 
 calculate_swap_size() {
+    local readonly filesystem=$(df | grep /mnt | gawk '{print $1}')
+
     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
     # lop off decimals with int(float)
@@ -127,8 +129,6 @@ calculate_swap_size() {
 }
 
 main() {
-    local filesystem=$(df | grep /mnt | gawk '{print $1}')
-
     if [ -f "$parameterFile" ]; then
         logger "Found $parameterFile."
         if [[ ! -z $parameterFile ]]; then
