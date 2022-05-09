@@ -78,11 +78,11 @@ fi
 calculate_swap_size() {
     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
-    memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print $2/1024}')
+    # lop off decimals with int(float)
+    memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
     logger "Total RAM: ${memTotal}M."
 
-    # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available, so
-    # lop off decimals with int(float)
+    # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
     freeDiskSpace=$(df | grep /mnt | gawk '{print int($4/1024)}')
     logger "$freeDiskSpace megabyes available on $filesystem(rounding down for safety)."
 
