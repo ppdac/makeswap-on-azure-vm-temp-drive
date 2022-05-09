@@ -129,9 +129,8 @@ calculate_swap_size() {
 main() {
     local filesystem=$(df | grep /mnt | gawk '{print $1}')
 
-    if [ test -f $parameterFile; ] then
+    if [ test -f $parameterFile ]; then
         logger "Found $parameterFile."
-
         if [[ ! -z $parameterFile ]]; then
             # Set the size of swap using the value stored in /var/local/makeswap-on-azure/swap_size
             swapSize=$(<$parameterFile)
