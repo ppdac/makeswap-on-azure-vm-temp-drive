@@ -25,7 +25,7 @@ sudo systemctl enable makeswap-on-azure.service
 sudo systemctl start makeswap-on-azure.service
 
 rm -rf makeswap-on-azure.service
-rm makeswap-on-azure.deb
+rm makeswap-on-azure.service.deb
 ```
 
 ## Uninstall
