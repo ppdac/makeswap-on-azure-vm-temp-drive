@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,30 +26,27 @@ jobs:
       # Checks if 
       - name: Build and install, then check if the pagefile was created.
         run: |
-            nslookup github.com
-            df -h
-            
-        # run: |
-        #   cd /home/runner/work/makeswap-on-azure.service
-        #   dpkg-deb --build makeswap-on-azure.service
-        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
+          sudo su
+          cd /home/runner/work/makeswap-on-azure.service
+          dpkg-deb --build makeswap-on-azure.service
+          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
 
-        #   sudo dpkg --install  makeswap-on-azure.service.deb
-        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
+          dpkg --install  makeswap-on-azure.service.deb
+          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
 
-        #   sudo systemctl enable makeswap-on-azure.service
-        #   journalctl -xe --no-pager
+          systemctl enable makeswap-on-azure.service
+          journalctl -xe --no-pager --unit systemd
+          cat /etc/systemd/system/runner-provisioner.service
+          systemctl start makeswap-on-azure.service
+          journalctl -xe --no-pager --unit systemd
 
-        #   sudo systemctl start makeswap-on-azure.service
-        #   journalctl -xe --no-pager
+          #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
+          if [ ! -f /mnt/pagefile ]; then exit 1; fi
 
-        #   #Exit codes: https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
-        #   if [ ! -f /mnt/pagefile ]; then exit 1; fi
+          systemctl disable makeswap-on-azure.service
+          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
 
-        #   sudo systemctl disable makeswap-on-azure.service
-        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
+          dpkg --remove makeswap-on-azure.service
+          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
 
-        #   sudo dpkg --remove makeswap-on-azure.service
-        #   if (($? != 0 )); then journalctl -xe --no-pager; fi
-
-        #   if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
+          if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
