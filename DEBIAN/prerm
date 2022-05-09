@@ -1,6 +1,6 @@
 #/bin/bash
 
-swapFile="/mnt/swapfile"
+swapFile="/mnt/pagefile"
 parameterFileDir="/var/local/makeswap-on-azure"
 
 swapoff $swapFile

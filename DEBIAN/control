@@ -1,8 +1,9 @@
 Package: makeswap-on-azure
-Version: 1.2.0
+Version: 1.2.1
 Section: base
 Priority: optional
 Architecture: amd64
+Depends: gawk (>= 3.1.8)
 Maintainer: Louis Waweru (@soyfrien)
 Description: Ensures a swapfile is created on temp disk bundled with Azure VM.
  Every VM contains a temporary disk, which is not a managed disk.

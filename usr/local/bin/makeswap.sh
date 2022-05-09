@@ -76,57 +76,58 @@ fi
 }
 
 calculate_swap_size() {
-    # $4/1024+0.5 is good for general rounding, but we don't want more than is available, so lop off decimals
-        freeDiskSpace=$(df | grep /mnt | awk '{print int($4/1024)}')
-        logger "$freeDiskSpace megabyes available on $filesystem(rounding down for safety)."
+    # Azure won't give you the full amount of RAM as some of it is taken by platform services.
+    # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
+    memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print $2/1024}')
+    logger "Total RAM: ${memTotal}M."
 
-        if [ $freeDiskSpace -gt 0 ]; then
-            logger "${freeDiskSpace}M available disk space on $filesystem."
+    # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available, so
+    # lop off decimals with int(float)
+    freeDiskSpace=$(df | grep /mnt | gawk '{print int($4/1024)}')
+    logger "$freeDiskSpace megabyes available on $filesystem(rounding down for safety)."
+
+    if [ $freeDiskSpace -gt 0 ]; then
+        logger "${freeDiskSpace}M available disk space on $filesystem."
+    else
+        err "{freeDiskSpace} bytes is not enough to proceed. Please free up some space on $filesystem."
+    fi
+
+    # Fork me ¯\_(ツ)_/¯  
+    if [ $freeDiskSpace -ge 256 ]; then
+        if [ $memTotal -lt 512 ]; then
+            echo 256M > $parameterFile
+        elif [ $memTotal -le 1024 ] && [ 512 -le $freeDiskSpace ];then
+            echo 512M > $parameterFile
+        elif [ $memTotal -le  2048 ] && [ 1024 -le $freeDiskSpace ]; then
+            echo 1G > $parameterFile
+        elif [ $memTotal -le 3072 ] && [ 1024 -le $freeDiskSpace ]; then
+            echo 1G > $parameterFile
+        elif [ $memTotal -le 4096 ] && [ 2048 -le $freeDiskSpace ]; then
+            echo 2G > $parameterFile
+        elif [ $memTotal -le 6144 ] && [ 4096 -le $freeDiskSpace ]; then
+            echo 4G > $parameterFile
+        elif [ $memTotal -le 7168 ] && [ 6144 -le $freeDiskSpace ]; then
+            echo 6G > $parameterFile
+        elif [ $memTotal -le 8192 ] && [ 7168 -le $freeDiskSpace ]; then
+            echo 7G > $parameterFile
+        elif [ $memTotal -le 12288 ] && [ 8192 -le $freeDiskSpace ]; then
+            echo 8G > $parameterFile
+        elif [ $memTotal -le 16384 ] && [ 12288 -le $freeDiskSpace ]; then
+            echo 12G > $parameterFile
+        elif [ $memTotal -ge 16384 ] && [ 16384 -le $freeDiskSpace ]; then
+            echo 16G > $parameterFile
+        elif [ $memTotal -le $freeDiskSpace ]; then
+            echo "${freeDiskSpace}M" > $parameterFile
         else
-            err "{freeDiskSpace} bytes is not enough to proceed. Please free up some space on $filesystem."
+            err "Failed to calculate swap size."
         fi
+    fi
 
-        # Azure won't give you the full amount of RAM as some of it is taken by platform services.
-        # Approximating 512 MiB to 500,000 kB, anso on, is close enough for these increments
-        memTotal=$(cat /proc/meminfo | grep MemTotal | awk '{print $2/1024}')
-        logger "Total RAM: ${memTotal}M."
-
-        # Fork me ¯\_(ツ)_/¯  
-        if [ $freeDiskSpace -ge 256 ]; then
-            if [ $memTotal -lt 512 ]; then
-                echo 256M > $parameterFile
-            elif [ $memTotal -le 1024 ] && [ 512 -le $freeDiskSpace ];then
-                echo 512M > $parameterFile
-            elif [ $memTotal -le  2048 ] && [ 1024 -le $freeDiskSpace ]; then
-                echo 1G > $parameterFile
-            elif [ $memTotal -le 3072 ] && [ 1024 -le $freeDiskSpace ]; then
-                echo 1G > $parameterFile
-            elif [ $memTotal -le 4096 ] && [ 2048 -le $freeDiskSpace ]; then
-                echo 2G > $parameterFile
-            elif [ $memTotal -le 6144 ] && [ 4096 -le $freeDiskSpace ]; then
-                echo 4G > $parameterFile
-            elif [ $memTotal -le 7168 ] && [ 6144 -le $freeDiskSpace ]; then
-                echo 6G > $parameterFile
-            elif [ $memTotal -le 8192 ] && [ 7168 -le $freeDiskSpace ]; then
-                echo 7G > $parameterFile
-            elif [ $memTotal -le 12288 ] && [ 8192 -le $freeDiskSpace ]; then
-                echo 8G > $parameterFile
-            elif [ $memTotal -le 16384 ] && [ 12288 -le $freeDiskSpace ]; then
-                echo 12G > $parameterFile
-            elif [ $memTotal -ge 32768 ] && [ 16384 -le $freeDiskSpace ]; then
-                echo 16G > $parameterFile
-            elif [ $memTotal -le $freeDiskSpace ]; then
-                echo "${freeDiskSpace}M" > $parameterFile
-            else
-                err "Failed to calculate swap size."
-            fi
-        fi
-
-        logger "Calculated swap size of $(cat $parameterFile)."
+    logger "Calculated swap size of $(cat $parameterFile)."
 }
 
 main() {
-    local filesystem=$(df | grep /mnt | awk '{print $1}')
+    local filesystem=$(df | grep /mnt | gawk '{print $1}')
 
     if [ test -f $parameterFile; ] then
         logger "Found $parameterFile."
