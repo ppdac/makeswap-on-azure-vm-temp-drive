@@ -68,6 +68,8 @@ jobs:
         with:
           name: artifact18-04
           path: ~/.github/artifacts
+      - name: mk artifacts dir
+        run: mkdir -p ~/.github/artifacts
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: ~/.github/artifacts
