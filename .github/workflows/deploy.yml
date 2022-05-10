@@ -41,6 +41,8 @@ jobs:
         run: sudo systemctl disable makeswap-on-azure.service
       - name: install
         run: sudo dpkg --install makeswap-on-azure.service.deb
+      - name: ENABLE
+        run: sudo systemctl enable makeswap-on-azure.service
       - name: START
         run: sudo systemctl start makeswap-on-azure
       - name: jnlctl
