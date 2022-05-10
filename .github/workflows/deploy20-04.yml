@@ -39,6 +39,10 @@ jobs:
         run: cd
       - name: MKD
         run: mkdir factions && mkdir ~/logs
+      - name: mk artifacts dir
+        run: mkdir -p ~/.github/artifacts
+      - name: dir permissions
+        run: chmod ug+rwx ~/.github/artifacts
       - name: CLONE
         run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
       - name: BUILD
@@ -68,8 +72,6 @@ jobs:
         with:
           name: artifact18-04
           path: ~/.github/artifacts
-      - name: mk artifacts dir
-        run: mkdir -p ~/.github/artifacts
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: ~/.github/artifacts
