@@ -4,7 +4,8 @@
 
 # Use the value from the parameter file if it exists
 # You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
-readonly PARAMETER_FILE='/var/local/makeswap-on-azure/swap_size'
+readonly CONFIG_DIR='/usr/local/etc/makeswap-on-azure'
+readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
 readonly SWAP_FILE='/mnt/pagefile'
 
 # Usage: logger "This will be logged."
@@ -30,8 +31,15 @@ err() {
 #######################################
 commit_swap() {
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
-    chmod ugo+w "$PARAMETER_FILE"
     local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+
+    chmod ugo+w "$PARAMETER_FILE"
+    if (($? == 0)); then
+        logger "chmod ugo+w $PARAMETER_FILE"
+    else
+        err "chmod ugo+w $PARAMETER_FILE failed"
+    fi
+    
     fallocate -l $SWAP_SIZE $SWAP_FILE
     if (($? == 0)); then
         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
@@ -73,21 +81,27 @@ commit_swap() {
 remove_swap() {
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$PARAMETER_FILE"
-
-    if [ -f "$SWAP_FILE"] ; then
-    logger "Swap file already exists, removing it."
-    swapoff "$SWAP_FILE"
     if (($? == 0)); then
-        logger "Swap disabled."
+        logger "chmod ugo+w $PARAMETER_FILE"
     else
-        err  "Failed to disable swap."
+        err "chmod ugo+w $PARAMETER_FILE failed"
     fi
-    
-    rm $SWAP_FILE
-    if (($? == 0)); then
-        logger "$SWAP_FILE was removed."
-    else
-        err "Failed to remove swap file from $SWAP_FILE"
+
+    if [ -f "$SWAP_FILE" ] ; then
+        logger "Swap file already exists, removing it."
+        swapoff "$SWAP_FILE"
+        if (($? == 0)); then
+            logger "Swap disabled."
+        else
+            err  "Failed to disable swap."
+        fi
+
+        rm $SWAP_FILE
+        if (($? == 0)); then
+            logger "$SWAP_FILE was removed."
+        else
+            err "Failed to remove swap file from $SWAP_FILE"
+        fi
     fi
 }
 
@@ -164,7 +178,7 @@ main() {
         logger "Found $PARAMETER_FILE."
         if [[ ! -z $PARAMETER_FILE ]]; then
             # Set the size of swap using the value stored in /var/local/makeswap-on-azure/swap_size
-            local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+            readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
             logger "Set the swap size to $SWAP_SIZE"
         else
             err "$PARAMETER_FILE is not set."
@@ -174,11 +188,11 @@ main() {
     if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
         logger "$PARAMETER_FILE is not present or is not set."
 
-        mkdir -p "/var/local/makeswap-on-azure"
+        mkdir -p "$CONFIG_DIR"
         if (($? == 0)); then
-            logger "Created directory /var/local/makeswap-on-azure"
+            logger "Created directory $CONFIG_DIR"
         else
-            err "Failed create directory /var/local/makeswap-on-azure"
+            err "Failed create directory $CONFIG_DIR"
         fi
 
         touch $PARAMETER_FILE
