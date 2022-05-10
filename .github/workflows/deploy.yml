@@ -37,12 +37,12 @@ jobs:
         run: sudo dpkg --install /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service.deb
       - name: ENABLE
         run: sudo systemctl enable makeswap-on-azure.service
+      # - name: START
+      #   run: chmod ug+rx /usr/sbin/makeswap
+      # - name: DEBUG
+      #   run: sudo /usr/sbin/makeswap
       - name: START
-        run: chmod ug+rx /usr/sbin/makeswap
-      - name: DEBUG
-        run: sudo /usr/sbin/makeswap
-      ##- name: START
-      ##  run: sudo systemctl start makeswap-on-azure.service
+        run: sudo systemctl start makeswap-on-azure.service
       # - name: systemctl status makeswap-on-azure.service
       #   run: systemctl status makeswap-on-azure.service
       - name: jnlctl
