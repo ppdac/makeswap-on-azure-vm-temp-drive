@@ -42,7 +42,7 @@ jobs:
       - name: install
         run: sudo dpkg --install makeswap-on-azure.service.deb
       - name: START
-        run: sudo systemctl start makeswap-on-azure.service
+        run: sudo /usr/sbin/makeswap
       # - name: systemctl status makeswap-on-azure.service
       #   run: systemctl status makeswap-on-azure.service
       - name: jnlctl
