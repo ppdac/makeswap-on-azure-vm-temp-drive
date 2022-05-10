@@ -60,20 +60,20 @@ jobs:
       - name: START
         run: sudo systemctl start makeswap-on-azure
       - name: JOURNALCTL1
-        run: journalctl -xe --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log
+        run: journalctl -xe --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log && cat ~/.github/artifacts/deploy20-04.journalctl2.log
       - name: DISABLE
         run: sudo systemctl disable makeswap-on-azure.service
       - name: REMOVE
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: JOURNALCTL2
-        run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log
-      - uses: actions/upload-artifact@v3
-        id: upload
-        with:
-          name: artifact20-04
-          path: ~/.github/artifacts
-      - name: Display structure of uploaded files
-        run: ls -R
-        working-directory: /home/runner/.github/artifacts
-      - name: 'Echo upload path'
-        run: echo ${{steps.upload.outputs.upload-path}}
+        run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log && cat ~/.github/artifacts/deploy20-04.journalctl2.log
+      #- uses: actions/upload-artifact@v3
+      #  id: upload
+      #  with:
+      #    name: artifact20-04
+      #    path: ~/.github/artifacts
+      #- name: Display structure of uploaded files
+      #  run: ls -R
+      #  working-directory: /home/runner/.github/artifacts
+      #- name: 'Echo upload path'
+      #  run: echo ${{steps.upload.outputs.upload-path}}
