@@ -1,4 +1,4 @@
-[![Deploy: Ubuntu (latest)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy.yml/badge.svg)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy.yml)
+[![Deployment/Removal on ubuntu-20.04](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy20-04.yml/badge.svg?branch=main)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy20-04.yml)
 
 # Index
 1. [Overview](#makeswap-on-azureservice)
