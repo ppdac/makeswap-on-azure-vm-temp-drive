@@ -5,45 +5,49 @@
 readonly DEPRECATED_DIR_A="/var/local/makeswap-on-azure"
 readonly DEPRECATED_DIR_B="/usr/local/etc/makeswap-on-azure"
 readonly SWAP_FILE="/mnt/pagefile"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 readonly PARAMETER_FILE_DIR="/var/local/makeswap-on-azure"
 =======
 readonly PARAMETER_FILE_DIR="/etc/makeswap-on-azure"
 >>>>>>> Stashed changes
+=======
+readonly PARAMETER_FILE_DIR="/usr/local/etc/makeswap-on-azure"
+>>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
 
 # Usage: logger "This will be logged."
 logger() {
-    echo "[makeswap-on-azure]: $*" >&1
+    logger "$*" >&1
 }
 
 # Usage: err "This is sent to STDERR before returning 1 on exit."
 err() {
-    echo "[makeswap-on-azure]: $*" >&2
+    logger "$*" >&2
     exit 1
 }
 
 if [ -f "$SWAP_FILE" ]; then
     swapoff $SWAP_FILE
     if (($? == 0)); then
-        echo "[makeswap-on-azure]: Swap file disabled." > /dev/kmsg
+        logger "Swap file disabled."
     else
-        echo "[makeswap-on-azure]: Failed to disable swap file." > /dev/kmsg
+        logger "Failed to disable swap file."
     fi
 
     rm $SWAP_FILE
     if (($? == 0)); then
-        echo "[makeswap-on-azure]: Swap file removed." > /dev/kmsg
+        logger "Swap file removed."
     else
-        echo "[makeswap-on-azure]: Failed to remove swap file." > /dev/kmsg
+        logger "Failed to remove swap file."
     fi
 fi
 
 if [ -d $PARAMETER_FILE_DIR ]; then
     rm -rf $PARAMETER_FILE_DIR
     if (($? == 0)); then
-        echo "[makeswap-on-azure]: Parameter file directory removed." > /dev/kmsg
+        logger "Parameter file directory removed."
     else
-        echo "[makeswap-on-azure]: Failed to remove parameter file directory." > /dev/kmsg
+        logger "Failed to remove parameter file directory."
     fi
 fi
 
