@@ -25,7 +25,7 @@ jobs:
   
       - name: setx
         run: set -x
-      -name: ls
+      - name: ls
         run: ls -lha /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
       - name: cd $GITHUB_WORKSPACE
         run: cd /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
