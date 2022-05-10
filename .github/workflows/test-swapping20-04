@@ -10,6 +10,15 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+        required-value:
+          description: "required value"
+          required: true
+        optional-value:
+          description: "optional value"
+          required: false
+      branches:
+        - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,6 +34,10 @@ jobs:
   
       - name: setx
         run: set -x
+       - name: mk artifacts dir
+        run: mkdir -p ~/.github/artifacts
+      - name: dir permissions
+        run: chmod ug+rwx ~/.github/artifacts
       - name: cdz
         run: cd && mkdir git
       - name: clone
@@ -68,4 +81,14 @@ jobs:
       - name: disable
         run: sudo systemctl disable makeswap-on-azure.service
       - name: jnlctl
-        run: journalctl -xe --lines 20 --no-pager
+        run: journalctl -xe --no-pager > ~/.github/artifacts/test-swapping20-04.journalctl2.log && cat ~/.github/artifacts/test-swapping20-04.journalctl2.log
+      #- uses: actions/upload-artifact@v3
+      #  id: upload
+      #  with:
+      #    name: artifact20-04
+      #    path: ~/.github/artifacts
+      #- name: Display structure of uploaded files
+      #  run: ls -R
+      #  working-directory: /home/runner/.github/artifacts
+      #- name: 'Echo upload path'
+      #  run: echo ${{steps.upload.outputs.upload-path}}
