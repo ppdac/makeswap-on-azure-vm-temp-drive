@@ -37,10 +37,10 @@ jobs:
         run: sudo dpkg --install makeswap-on-azure.service.deb
       - name: ENABLE
         run: sudo systemctl enable makeswap-on-azure.service
-      - name: BRUH THIS WORKS ON OTHER COMPUTERS
+      - name: disable
         run: sudo systemctl disable makeswap-on-azure.service
-      - name: ACTIONnnnnnannnnnnnasnnan
-        run: sudo dpkg --remove makeswap-on-azure.service
+      - name: install
+        run: sudo dpkg --install makeswap-on-azure.service.deb
       - name: START
         run: sudo systemctl start makeswap-on-azure.service
       # - name: systemctl status makeswap-on-azure.service
