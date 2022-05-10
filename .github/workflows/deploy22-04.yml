@@ -1,66 +1,66 @@
-name: Deployment/Removal on ubuntu-22.04
+# name: Deployment/Removal on ubuntu-22.04
 
-# Controls when the workflow will run
-on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
-      tags:
-        description: 'Test scenario tags'
-        required: false 
-        type: boolean
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true 
+# # Controls when the workflow will run
+# on: 
+#   workflow_dispatch:
+#     inputs:
+#       logLevel:
+#         description: 'Log level'     
+#         required: true
+#         default: 'warning' 
+#         type: choice
+#         options:
+#         - info
+#         - warning
+#         - debug 
+#       tags:
+#         description: 'Test scenario tags'
+#         required: false 
+#         type: boolean
+#       environment:
+#         description: 'Environment to run tests against'
+#         type: environment
+#         required: true 
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-  jobs:
-    # This workflow contains a single job called "build"
-    build:
-      # The type of runner that the job will run on
-      runs-on: ubuntu-22.04
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+#   jobs:
+#     # This workflow contains a single job called "build"
+#     build:
+#       # The type of runner that the job will run on
+#       runs-on: ubuntu-22.04
 
-      # Steps represent a sequence of tasks that will be executed as part of the job
-      steps:
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        # - uses: actions/checkout@v2
+#       # Steps represent a sequence of tasks that will be executed as part of the job
+#       steps:
+#         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#         # - uses: actions/checkout@v2
     
-        - name: setx
-          run: set -x
-        - name: prep
-          run: cd
-        - name: prep
-          run: mkdir factions
-        - name: prep
-          run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
-        - name: build
-          run: dpkg-deb --build makeswap-on-azure.service
-        - name: INSTALL
-          run: sudo dpkg --install makeswap-on-azure.service.deb
-        - name: ENABLE
-          run: sudo systemctl enable makeswap-on-azure.service
-        - name: disable
-          run: sudo systemctl disable makeswap-on-azure.service
-        - name: install
-          run: sudo dpkg --install makeswap-on-azure.service.deb
-        - name: ENABLE
-          run: sudo systemctl enable makeswap-on-azure.service
-        - name: START
-          run: sudo systemctl start makeswap-on-azure
-        - name: journlctl
-          run: journalctl -xe --lines 20 --no-pager
-        - name: disable
-          run: sudo systemctl disable makeswap-on-azure.service
-        - name: remove
-          run: sudo dpkg --remove makeswap-on-azure.service
-        - name: journlctl
-          run: journalctl -xe --lines 20 --no-pager
+#         - name: setx
+#           run: set -x
+#         - name: prep
+#           run: cd
+#         - name: prep
+#           run: mkdir factions
+#         - name: prep
+#           run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
+#         - name: build
+#           run: dpkg-deb --build makeswap-on-azure.service
+#         - name: INSTALL
+#           run: sudo dpkg --install makeswap-on-azure.service.deb
+#         - name: ENABLE
+#           run: sudo systemctl enable makeswap-on-azure.service
+#         - name: disable
+#           run: sudo systemctl disable makeswap-on-azure.service
+#         - name: install
+#           run: sudo dpkg --install makeswap-on-azure.service.deb
+#         - name: ENABLE
+#           run: sudo systemctl enable makeswap-on-azure.service
+#         - name: START
+#           run: sudo systemctl start makeswap-on-azure
+#         - name: journlctl
+#           run: journalctl -xe --lines 20 --no-pager
+#         - name: disable
+#           run: sudo systemctl disable makeswap-on-azure.service
+#         - name: remove
+#           run: sudo dpkg --remove makeswap-on-azure.service
+#         - name: journlctl
+#           run: journalctl -xe --lines 20 --no-pager
