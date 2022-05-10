@@ -30,7 +30,7 @@ jobs:
       - name: cd $GITHUB_WORKSPACE
         run: cd /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
       - name: ls
-        run: ls -lha
+        run: ls -lha DEBIAN
       - name: build
         run: dpkg-deb --build makeswap-on-azure.service
       - name: INSTALL
