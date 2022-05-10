@@ -1,0 +1,71 @@
+name: Live Swap Testing on ubuntu-20.04
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+  
+      - name: setx
+        run: set -x
+      - name: cdz
+        run: cd && mkdir git
+      - name: clone
+        run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
+      - name: build
+        run: dpkg-deb --build makeswap-on-azure.service
+      - name: INSTALL
+        run: sudo dpkg --install makeswap-on-azure.service.deb
+      - name: ENABLE
+        run: sudo systemctl enable makeswap-on-azure.service
+      - name: START
+        run: sudo systemctl start makeswap-on-azure
+      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: Resize => 262120K > /etc/makeswap-on-azure/swap_size
+        run: echo 262120K > /etc/makeswap-on-azure/swap_size
+      - name: restart
+        run: sudo systemctl restart makeswap-on-azure.service
+       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: Resize => 4096.50M > /etc/makeswap-on-azure/swap_size
+        run: echo 262120K > /etc/makeswap-on-azure/swap_size
+      - name: restart
+        run: sudo systemctl restart makeswap-on-azure.service
+       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: Resize => 402653184.212344 bytes > /etc/makeswap-on-azure/swap_size
+        run: echo 402653184 > /etc/makeswap-on-azure/swap_size
+      - name: restart
+        run: sudo systemctl restart makeswap-on-azure.service
+       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: Resize => 64G > /etc/makeswap-on-azure/swap_size
+        run: echo 64.64G > /etc/makeswap-on-azure/swap_size
+      - name: restart
+        run: sudo systemctl restart makeswap-on-azure.service
+       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: remove
+        run: sudo dpkg --remove makeswap-on-azure.service.deb
+      - name: disable
+        run: sudo systemctl disable makeswap-on-azure.service
+      - name: jnlctl
+        run: journalctl -xe --lines 20 --no-pager
