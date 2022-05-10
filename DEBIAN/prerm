@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 #
 # Runs when dpkg --remove makeswap-on-azure.service is called
 # Removes configuration file and swap file, if present
