@@ -38,9 +38,9 @@ jobs:
       - name: ENABLE
         run: sudo systemctl enable makeswap-on-azure.service
       - name: START
-        run: chmod ug+rx /usr/sbin/makeswap.sh
+        run: chmod ug+rx /usr/sbin/makeswap
       - name: DEBUG
-        run: sudo /usr/sbin/makeswap.sh
+        run: sudo /usr/sbin/makeswap
       ##- name: START
       ##  run: sudo systemctl start makeswap-on-azure.service
       # - name: systemctl status makeswap-on-azure.service

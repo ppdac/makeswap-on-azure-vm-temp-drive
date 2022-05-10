@@ -4,8 +4,8 @@
 Description=Makes a swap file on the volitile temp drive
 
 [Service]
-ExecStartPre=+chmod ug+rx /usr/sbin/makeswap.sh
-ExecStart=+/usr/sbin/makeswap.sh
+ExecStartPre=+chmod ug+rx /usr/sbin/makeswap
+ExecStart=+/usr/sbin/makeswap
 Type=oneshot
 RemainAfterExit=yes
 
