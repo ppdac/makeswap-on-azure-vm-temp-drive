@@ -60,13 +60,17 @@ jobs:
       - name: START
         run: sudo systemctl start makeswap-on-azure
       - name: JOURNALCTL1
-        run: journalctl -xe --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log && cat ~/.github/artifacts/deploy20-04.journalctl2.log
+        run: journalctl -xe --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log
+      - name: journalctl -xe --lines 20 --no-pager
+        run: journalctl -xe --lines 20 --no-pager
       - name: DISABLE
         run: sudo systemctl disable makeswap-on-azure.service
       - name: REMOVE
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: JOURNALCTL2
-        run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log && cat ~/.github/artifacts/deploy20-04.journalctl2.log
+        run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log
+      - name: JOURNALCTL2-stdout
+        run: journalctl -xe --no-page
       #- uses: actions/upload-artifact@v3
       #  id: upload
       #  with:
