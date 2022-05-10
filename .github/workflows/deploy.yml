@@ -96,7 +96,8 @@ jobs:
       #     echo ""
       #     echo "<-- FIND PAGEFILE AFTER REMOVAL-->"
       #     #if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
-      # - name: Find errors
-      #   run: |
-      #       systemctl status makeswap-on-azure.service
+      - name: dosba;e
+        run: systemctl disable makeswap-on-azure.service
+      - name: remove
+        run: sudo dpkg --remove makeswap-on-azure.service
       #       journalctl -xe --lines 20 --no-pager
