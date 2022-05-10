@@ -25,18 +25,16 @@ jobs:
   
       - name: setx
         run: set -x
-      - name: ls
-        run: ls -lha /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
-      - name: cd $GITHUB_WORKSPACE
-        run: chmod ug+rx -R /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
-      - name: ls
-        run: ls -lha DEBIAN
+      - name: cdz
+        run: cd
+      - name: factions
+        run: mkdir factions
+      - name: calzone
+        run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
       - name: build
         run: dpkg-deb --build makeswap-on-azure.service
       - name: INSTALL
         run: sudo dpkg --install makeswap-on-azure.service.deb
-      - name: cd
-        run: cd
       - name: ENABLE
         run: sudo systemctl enable makeswap-on-azure.service
       - name: BRUH THIS WORKS ON OTHER COMPUTERS
