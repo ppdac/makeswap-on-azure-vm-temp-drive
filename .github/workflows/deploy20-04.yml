@@ -9,7 +9,17 @@ on:
     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
+  workflow_dispatch:
+    inputs:
+        required-value:
+          description: "required value"
+          required: true
+        optional-value:
+          description: "optional value"
+          required: false
+      branches:
+        - main
+      
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,6 +33,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: github events req
+        run: echo ${{ github.event.inputs.required-value }}
+      - name: github events opt
+        run: echo ${{ github.event.inputs.optional-value }}
       - name: SETX
         run: set -x
       - name: CD
