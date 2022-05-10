@@ -17,10 +17,7 @@ on:
         optional-value:
           description: "optional value"
           required: false
-    branches:
-    - main
-      
-
+    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -32,7 +29,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
       - name: github events req
         run: echo ${{ github.event.inputs.required-value }}
       - name: github events opt
@@ -67,14 +63,13 @@ jobs:
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: JOURNALCTL2
         run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log
-
       - uses: actions/download-artifact@v3
         id: download
         with:
           name: artifact18-04
           path: ~/.github/artifacts
-        - name: Display structure of downloaded files
-          run: ls -R
-          working-directory: ~/.github/artifacts
-        - name: 'Echo download path'
-          run: echo ${{steps.download.outputs.download-path}}
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ~/.github/artifacts
+      - name: 'Echo download path'
+        run: echo ${{steps.download.outputs.download-path}}
