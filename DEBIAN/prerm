@@ -5,15 +5,7 @@
 readonly DEPRECATED_DIR_A="/var/local/makeswap-on-azure"
 readonly DEPRECATED_DIR_B="/usr/local/etc/makeswap-on-azure"
 readonly SWAP_FILE="/mnt/pagefile"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-readonly PARAMETER_FILE_DIR="/var/local/makeswap-on-azure"
-=======
 readonly PARAMETER_FILE_DIR="/etc/makeswap-on-azure"
->>>>>>> Stashed changes
-=======
-readonly PARAMETER_FILE_DIR="/usr/local/etc/makeswap-on-azure"
->>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
 
 # Usage: logger "This will be logged."
 logger() {

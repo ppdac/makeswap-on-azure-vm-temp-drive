@@ -3,20 +3,10 @@
 # Creates swap file on the temp drive
 
 # Use the value from the parameter file if it exists
-<<<<<<< Updated upstream
-# You can always set /var/local/makeswap-on-azure/swap_size to your desired size and restart service.
-<<<<<<< HEAD
-readonly PARAMETER_FILE='/var/local/makeswap-on-azure/swap_size'
-=======
 # You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
 # See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
 readonly CONFIG_DIR='/etc/makeswap-on-azure'
 readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
->>>>>>> Stashed changes
-=======
-readonly CONFIG_DIR='/usr/local/etc/makeswap-on-azure'
-readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
->>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
 readonly SWAP_FILE='/mnt/pagefile'
 
 # Usage: logger "This will be logged."
@@ -188,17 +178,8 @@ main() {
     if [ -f "$PARAMETER_FILE" ]; then
         logger "Found $PARAMETER_FILE."
         if [[ ! -z $PARAMETER_FILE ]]; then
-<<<<<<< Updated upstream
-            # Set the size of swap using the value stored in /var/local/makeswap-on-azure/swap_size
-<<<<<<< HEAD
-            local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
-=======
             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
->>>>>>> Stashed changes
-=======
-            readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
->>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
             logger "Set the swap size to $SWAP_SIZE"
         else
             err "$PARAMETER_FILE is not set."

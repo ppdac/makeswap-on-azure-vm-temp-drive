@@ -4,7 +4,7 @@ name: Deployment on ubuntu-20.04
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ squash-commits-rebasing ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -22,9 +22,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
   
       - name: setx
         run: set -x
@@ -59,75 +56,12 @@ jobs:
       #     echo "<-- BUILD -->"
       #     dpkg-deb --build makeswap-on-azure.service
       #     if (($? != 0 )); then journalctl -xe --lines 20 --no-pager; fi
->>>>>>> Stashed changes
-
-      # Checks if 
-      - name: Build and install, then check if the pagefile was created.
-        run: |
-          cd /home/runner/work/makeswap-on-azure.service
-          dpkg-deb --build makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
-
-          sudo dpkg --install  makeswap-on-azure.service.deb
-          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
-
-          sudo systemctl enable makeswap-on-azure.service
-          journalctl -xe --no-pager --unit systemd
-          cat /etc/systemd/system/runner-provisioner.service
-          sudo systemctl start makeswap-on-azure.service
-          journalctl -xe --no-pager --unit systemd
-=======
-  
-      # Checks if 
-      - name: setx
-        run: set -x
-      - name: $ls /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
-        run: ls -lha /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
-      # - name: $ls -lha /home/runner/work/makeswap-on-azure.service 
-      #   run: ls -lha /home/runner/work/makeswap-on-azure.service
-      - name: apt
-        run: sudo apt install gawk -y
-      - name: build
-        run: dpkg-deb --build /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service
-      - name: INSTALL
-        run: sudo dpkg --install /home/runner/work/makeswap-on-azure.service/makeswap-on-azure.service.deb
-      - name: ENABLE
-        run: sudo systemctl enable makeswap-on-azure.service
-      # - name: START
-      #   run: chmod ug+rx /usr/local/bin/makeswap.sh
-      # - name: DEBUG
-      #   run: sudo /usr/local/bin/makeswap.sh
-      - name: START
-        run: sudo systemctl start makeswap-on-azure.service
-      # - name: systemctl status makeswap-on-azure.service
-      #   run: systemctl status makeswap-on-azure.service
-      - name: jnlctl
-        run: journalctl -xe --lines 20 --no-pager
-      # - name: $ls $GITHUB_WORKSPACE
-      #   run: ls -lha $GITHUB_WORKSPACE
-    
-          
-      #     cd /home/runner/work/makeswap-on-azure.service
-      #     echo ""
-      #     echo "<-- BUILD -->"
-      #     dpkg-deb --build makeswap-on-azure.service
-      #     if (($? != 0 )); then journalctl -xe --lines 20 --no-pager; fi
->>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
 
       #     echo ""
       #     echo "<-- INSTALL -->"
       #     sudo dpkg --install  makeswap-on-azure.service.deb
       #     if (($? != 0 )); then journalctl -xe --lines 20 --no-pager; fi
 
-<<<<<<< HEAD
-          sudo systemctl disable makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
-
-          sudo dpkg --remove makeswap-on-azure.service
-          if (($? != 0 )); then journalctl -xe --no-pager --unit systemd; fi
-
-          if [ ! -f /mnt/pagefile ]; then exit 0; else exit 101; fi
-=======
       #     echo ""
       #     printf $'\n<-- ENABLE -->\n'
       #     sudo systemctl enable makeswap-on-azure.service
@@ -168,4 +102,3 @@ jobs:
       #   run: |
       #       systemctl status makeswap-on-azure.service
       #       journalctl -xe --lines 20 --no-pager
->>>>>>> 6bc2c1c32770c0c4b6f556048c9e4f302c7241bd
