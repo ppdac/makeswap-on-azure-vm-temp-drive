@@ -17,8 +17,6 @@ on:
         optional-value:
           description: "optional value"
           required: false
-      branches:
-        - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,7 +32,7 @@ jobs:
   
       - name: setx
         run: set -x
-       - name: mk artifacts dir
+      - name: mk artifacts dir
         run: mkdir -p ~/.github/artifacts
       - name: dir permissions
         run: chmod ug+rwx ~/.github/artifacts
@@ -51,37 +49,39 @@ jobs:
       - name: START
         run: sudo systemctl start makeswap-on-azure
       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: Resize => 262120K > /etc/makeswap-on-azure/swap_size
         run: echo 262120K > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: Resize => 4096.50M > /etc/makeswap-on-azure/swap_size
         run: echo 262120K > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: Resize => 402653184.212344 bytes > /etc/makeswap-on-azure/swap_size
         run: echo 402653184 > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: journalctl --unit makeswap-on-azure --no-pager -xe
         run: journalctl --unit makeswap-on-azure.service --no-pager -xe
       - name: Resize => 64G > /etc/makeswap-on-azure/swap_size
         run: echo 64.64G > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-       - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
+      - name: journalctl --unit makeswap-on-azure --no-pager -xe
+        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: remove
-        run: sudo dpkg --remove makeswap-on-azure.service.deb
+        run: sudo dpkg --remove makeswap-on-azure.service
       - name: disable
         run: sudo systemctl disable makeswap-on-azure.service
       - name: jnlctl
-        run: journalctl -xe --no-pager > ~/.github/artifacts/test-swapping20-04.journalctl2.log && cat ~/.github/artifacts/test-swapping20-04.journalctl2.log
+        run: journalctl -xe --unit makeswap-on-azure --no-pager > ~/.github/artifacts/test-swapping20-04.journalctl2.log
+      - name: log to stdout
+        run: journalctl -xe --unit makeswap-on-azure --no-pager
       #- uses: actions/upload-artifact@v3
       #  id: upload
       #  with:
