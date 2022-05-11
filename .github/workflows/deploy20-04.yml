@@ -1,4 +1,4 @@
-name: Deployment/Removal on ubuntu-20.04
+name: Deploy/Remove Tests (ubuntu-20.04)
 
 # Controls when the workflow will run
 on:
@@ -60,9 +60,7 @@ jobs:
       - name: START
         run: sudo systemctl start makeswap-on-azure
       - name: JOURNALCTL1
-        run: journalctl -xe --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log
-      - name: journalctl -xe --lines 20 --no-pager
-        run: journalctl -xe --lines 20 --no-pager
+        run: journalctl -xe --unit makeswap-on-azure --lines 20 --no-pager > ~/.github/artifacts/deploy20-04.journalctl1.log
       - name: DISABLE
         run: sudo systemctl disable makeswap-on-azure.service
       - name: REMOVE
@@ -71,13 +69,13 @@ jobs:
         run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log
       - name: JOURNALCTL2-stdout
         run: journalctl -xe --no-page
-      #- uses: actions/upload-artifact@v3
-      #  id: upload
-      #  with:
-      #    name: artifact20-04
-      #    path: ~/.github/artifacts
-      #- name: Display structure of uploaded files
-      #  run: ls -R
-      #  working-directory: /home/runner/.github/artifacts
-      #- name: 'Echo upload path'
-      #  run: echo ${{steps.upload.outputs.upload-path}}
+      - uses: actions/upload-artifact@v3
+        id: upload
+        with:
+          name: artifact20-04
+          path: ~/.github/artifacts
+      - name: Display structure of uploaded files
+        run: ls -R
+        working-directory: /home/runner/.github/artifacts
+      - name: 'Echo upload path'
+        run: echo ${{steps.upload.outputs.upload-path}}
