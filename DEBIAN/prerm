@@ -12,12 +12,6 @@ logger() {
     logger "$*" >&1
 }
 
-# Usage: err "This is sent to STDERR before returning 1 on exit."
-err() {
-    logger "$*" >&2
-    exit 1
-}
-
 if [ -f $SWAP_FILE ]; then
     swapoff $SWAP_FILE
     if (($? == 0)); then
