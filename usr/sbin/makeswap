@@ -187,14 +187,14 @@ main() {
     if [ ! -f "$PARAMETER_FILE" ] || [ -z "$SWAP_SIZE" ]; then
         logger "$PARAMETER_FILE is not present or is not set."
 
-        mkdir -p $"CONFIG_DIR"
+        mkdir -p "$CONFIG_DIR"
         if (($? == 0)); then
             logger "Created directory $CONFIG_DIR"
         else
             err "Failed create directory $CONFIG_DIR"
         fi
 
-        sudo touch $PARAMETER_FILE
+        touch $PARAMETER_FILE
         if (($? == 0)); then
             logger "Created $PARAMETER_FILE to hold swap size configuration."
         else
