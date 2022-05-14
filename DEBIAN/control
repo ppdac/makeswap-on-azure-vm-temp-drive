@@ -1,5 +1,5 @@
 Package: makeswap-on-azure
-Version: 1.2.6
+Version: 1.2.7
 Priority: optional
 Architecture: amd64
 Depends: gawk (>= 3.1.8)

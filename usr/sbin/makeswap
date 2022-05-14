@@ -4,7 +4,7 @@
 
 # Use the value from the parameter file if it exists
 # You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
-# See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
+# See https://github.com/soyfrien/makeswap-on-azure.service#adjust-amount-of-virtual-memory
 readonly CONFIG_DIR='/etc/makeswap-on-azure'
 readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
 readonly SWAP_FILE='/mnt/pagefile'
@@ -126,10 +126,8 @@ calculate_swap_size() {
 
     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
     local FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4/1024)}')
-    logger "$FREE_DISK_SPACE megabyes available on $FILESYSTEM (rounding down for safety)."
-
     if [ $FREE_DISK_SPACE -gt 0 ]; then
-        logger "${FREE_DISK_SPACE}M available disk space on $FILESYSTEM."
+        logger "${FREE_DISK_SPACE}M available disk space on $FILESYSTEM (rounding down for safety)."
     else
         err "{FREE_DISK_SPACE} bytes is not enough to proceed. Please free up some space on $FILESYSTEM."
     fi
@@ -182,7 +180,7 @@ main() {
             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
             logger "Set the swap size to $SWAP_SIZE"
         else
-            err "$PARAMETER_FILE is not set."
+            logger "$PARAMETER_FILE is not set."
         fi
     fi
 
