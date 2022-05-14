@@ -32,7 +32,7 @@ git clone --branch v1.2.8 https://github.com/ppdac/makeswap-on-azure.service.git
 dpkg-deb --build makeswap-on-azure.service
 sudo dpkg --install makeswap-on-azure.service.deb
 sudo systemctl enable makeswap-on-azure.service
-sudo systemctl start makeswap-on-azure.service
+sudo systemctl restart makeswap-on-azure.service
 
 rm -rf makeswap-on-azure.service
 rm makeswap-on-azure.service.deb
@@ -42,7 +42,7 @@ rm makeswap-on-azure.service.deb
 ## Uninstall
 ```
 sudo systemctl disable makeswap-on-azure.service 
-sudo dpkg --remove makeswap-on-azure.service
+sudo dpkg --remove makeswap-on-azure
 ```
 
 
