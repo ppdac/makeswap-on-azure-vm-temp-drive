@@ -90,7 +90,7 @@ remove_swap() {
 
     if [ -f "$SWAP_FILE" ] ; then
         logger "Swap file already exists, removing it."
-        swapoff "$SWAP_FILE"
+        swapoff $SWAP_FILE
         if (($? == 0)); then
             logger "Swap disabled."
         else
