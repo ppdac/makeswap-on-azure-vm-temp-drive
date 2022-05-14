@@ -34,7 +34,7 @@ commit_swap() {
     local SWAP_SIZE=$(cat $PARAMETER_FILE)
 
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
-    chmod ugo+w "$PARAMETER_FILE"
+    chmod ugo+w $PARAMETER_FILE
     if (($? == 0)); then
         logger "chmod ugo+w $PARAMETER_FILE"
     else
@@ -48,14 +48,14 @@ commit_swap() {
         err "Failed to allocate $SWAP_SIZE to $SWAP_FILE"
     fi
 
-    chmod 600 "$SWAP_FILE"
+    chmod 600 $SWAP_FILE
     if (($? == 0)); then
         logger "Set 600 permissions on $SWAP_FILE"
     else
         err "Failed to set 600 permissions on $SWAP_FILE"
     fi
 
-    mkswap "$SWAP_FILE"
+    mkswap $SWAP_FILE
     if (($? == 0)); then
         logger "Recreated swap file $SWAP_FILE"
     else
@@ -187,7 +187,7 @@ main() {
     if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
         logger "$PARAMETER_FILE is not present or is not set."
 
-        mkdir -p "$CONFIG_DIR"
+        mkdir -p $CONFIG_DIR
         if (($? == 0)); then
             logger "Created directory $CONFIG_DIR"
         else
