@@ -31,9 +31,9 @@ err() {
 #   0 or non-zero on error.
 #######################################
 commit_swap() {
-    # https://github.com/ppdac/makeswap-on-azure.service/issues/3
-    local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+    local SWAP_SIZE=$(cat $PARAMETER_FILE)
 
+    # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$PARAMETER_FILE"
     if (($? == 0)); then
         logger "chmod ugo+w $PARAMETER_FILE"
@@ -45,7 +45,7 @@ commit_swap() {
     if (($? == 0)); then
         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
     else
-        err "Failed to allocate $SWAP_FILE to $SWAP_FILE"
+        err "Failed to allocate $SWAP_SIZE to $SWAP_FILE"
     fi
 
     chmod 600 "$SWAP_FILE"
