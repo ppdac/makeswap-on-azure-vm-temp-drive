@@ -194,7 +194,7 @@ main() {
             err "Failed create directory $CONFIG_DIR"
         fi
 
-        touch $PARAMETER_FILE
+        sudo touch $PARAMETER_FILE
         if (($? == 0)); then
             logger "Created $PARAMETER_FILE to hold swap size configuration."
         else
