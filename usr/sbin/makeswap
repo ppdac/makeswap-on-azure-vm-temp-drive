@@ -34,35 +34,35 @@ commit_swap() {
     local SWAP_SIZE=$(cat $PARAMETER_FILE)
 
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
-    chmod ugo+w $PARAMETER_FILE
+    chmod ugo+w "$PARAMETER_FILE"
     if (($? == 0)); then
         logger "chmod ugo+w $PARAMETER_FILE"
     else
         err "chmod ugo+w $PARAMETER_FILE failed"
     fi
     
-    fallocate -l $SWAP_SIZE $SWAP_FILE
+    fallocate -l "$SWAP_SIZE $SWAP_FILE"
     if (($? == 0)); then
         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
     else
         err "Failed to allocate $SWAP_SIZE to $SWAP_FILE"
     fi
 
-    chmod 600 $SWAP_FILE
+    chmod 600 "$SWAP_FILE"
     if (($? == 0)); then
         logger "Set 600 permissions on $SWAP_FILE"
     else
         err "Failed to set 600 permissions on $SWAP_FILE"
     fi
 
-    mkswap $SWAP_FILE
+    mkswap "$SWAP_FILE"
     if (($? == 0)); then
         logger "Recreated swap file $SWAP_FILE"
     else
         err "Failed to recreate swap file $SWAP_FILE"
     fi
 
-    swapon $SWAP_FILE
+    swapon "$SWAP_FILE"
     if (($? == 0)); then
         logger "The ${SWAP_FILE} swap file was enabled as $SWAP_FILE."
     else
@@ -90,14 +90,14 @@ remove_swap() {
 
     if [ -f "$SWAP_FILE" ] ; then
         logger "Swap file already exists, removing it."
-        swapoff $SWAP_FILE
+        swapoff "$SWAP_FILE"
         if (($? == 0)); then
             logger "Swap disabled."
         else
             err  "Failed to disable swap."
         fi
 
-        rm $SWAP_FILE
+        rm "$SWAP_FILE"
         if (($? == 0)); then
             logger "$SWAP_FILE was removed."
         else
@@ -175,7 +175,7 @@ calculate_swap_size() {
 main() {
     if [ -f "$PARAMETER_FILE" ]; then
         logger "Found $PARAMETER_FILE."
-        if [[ ! -z $PARAMETER_FILE ]]; then
+        if [[ ! -z "$PARAMETER_FILE" ]]; then
             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
             logger "Set the swap size to $SWAP_SIZE"
@@ -184,24 +184,24 @@ main() {
         fi
     fi
 
-    if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
+    if [ ! -f "$PARAMETER_FILE" ] || [ -z "$SWAP_SIZE" ]; then
         logger "$PARAMETER_FILE is not present or is not set."
 
-        mkdir -p $CONFIG_DIR
+        mkdir -p $"CONFIG_DIR"
         if (($? == 0)); then
             logger "Created directory $CONFIG_DIR"
         else
             err "Failed create directory $CONFIG_DIR"
         fi
 
-        touch $PARAMETER_FILE
+        touch "$PARAMETER_FILE"
         if (($? == 0)); then
             logger "Created $PARAMETER_FILE to hold swap size configuration."
         else
             err "Failed to create configuration file $PARAMETER_FILE"
         fi
 
-        if [ -f $SWAP_FILE ]; then
+        if [ -f "$SWAP_FILE" ]; then
             logger "Removing a swap file that is already present."
             remove_swap
             if (($? != 0)); then

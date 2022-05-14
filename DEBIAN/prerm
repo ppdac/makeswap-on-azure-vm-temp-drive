@@ -9,18 +9,18 @@ readonly PARAMETER_FILE_DIR='/etc/makeswap-on-azure'
 
 # Usage: logger "This will be logged."
 logger() {
-    logger "$*" >&1
+    echo "$*" >&1
 }
 
-if [ -f $SWAP_FILE ]; then
-    swapoff $SWAP_FILE
+if [ -f "$SWAP_FILE" ]; then
+    swapoff "$SWAP_FILE"
     if (($? == 0)); then
         logger "Swap file disabled."
     else
         logger "Failed to disable swap file."
     fi
 
-    rm $SWAP_FILE
+    rm "$SWAP_FILE"
     if (($? == 0)); then
         logger "Swap file removed."
     else
@@ -28,8 +28,8 @@ if [ -f $SWAP_FILE ]; then
     fi
 fi
 
-if [ -d $PARAMETER_FILE_DIR ]; then
-    rm -rf $PARAMETER_FILE_DIR
+if [ -d "$PARAMETER_FILE_DIR" ]; then
+    rm -rf "$PARAMETER_FILE_DIR"
     if (($? == 0)); then
         logger "Parameter file directory removed."
     else
@@ -37,8 +37,8 @@ if [ -d $PARAMETER_FILE_DIR ]; then
     fi
 fi
 
-if [ -d $DEPRECATED_DIR_A ]; then
-    rm -rf $DEPRECATED_DIR_A
+if [ -d "$DEPRECATED_DIR_A" ]; then
+    rm -rf "$DEPRECATED_DIR_A"
     if (($? == 0)); then
         logger "Oringal parameter file directory removed."
     else
@@ -46,8 +46,8 @@ if [ -d $DEPRECATED_DIR_A ]; then
     fi
 fi
 
-if [ -d $DEPRECATED_DIR_B ]; then
-    rm -rf $DEPRECATED_DIR_B
+if [ -d "$DEPRECATED_DIR_B" ]; then
+    rm -rf "$DEPRECATED_DIR_B"
     if (($? == 0)); then
         logger "Former parameter file directory removed."
     else
