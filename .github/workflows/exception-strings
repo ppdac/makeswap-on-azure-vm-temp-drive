@@ -1,0 +1,18 @@
+bytes is not enough to proceed. Please free up some space on
+Failed to calculate swap size
+Failed create directory
+Failed to create configuration file
+Failed to remove existing swap file
+Exception in calculate_swap_size
+Exception in commit_swap
+Failed to remove swap file from
+ failed
+Failed to enable the swap file
+Failed to recreate swap file
+Failed to set 600 permissions on
+Failed to allocate
+Failed to disable swap file
+Failed to remove swap file
+Failed to remove parameter file directory
+Failed to remove original parameter file directory
+Failed to remove former parameter file directory

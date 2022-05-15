@@ -67,8 +67,14 @@ jobs:
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: JOURNALCTL2
         run: journalctl -xe --no-pager > ~/.github/artifacts/deploy20-04.journalctl2.log
-      - name: JOURNALCTL2-stdout
-        run: journalctl -xe --no-page
+      - name: log to stdout
+        run: journalctl -xe --unit makeswap-on-azure --no-pager
+      - name: killswitch-strings
+        run: wget https://raw.githubusercontent.com/soyfrien/makeswap-on-azure.service/main/.github/workflows/exception-strings
+      - name: killswitch-log
+        run: journalctl -xe --unit makeswap-on-azure --no-pager > killswitch.log
+      - name: killswitch
+        run:  count=$(grep -f exception-strings killswitch.log | wc -l); if  [[ ! -z $count ]] || [ $count > 0 ]; then exit 1; fi
       - uses: actions/upload-artifact@v3
         id: upload
         with:
