@@ -1,0 +1,1795 @@
+-- Logs begin at Fri 2022-04-01 19:40:01 UTC, end at Sun 2022-05-15 21:02:01 UTC. --
+May 05 15:10:26 cosmic makeswap.sh[1090]: swapoff: /mnt/pagefile: swapoff failed: Invalid argument
+May 05 15:10:26 cosmic makeswap.sh[1155]: Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
+May 05 15:10:26 cosmic makeswap.sh[1155]: no label, UUID=42af326e-baa1-47e2-abe5-8d4be228a5a8
+May 05 15:10:26 cosmic systemd[1]: Finished Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 134.
+May 09 04:49:13 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 09 04:49:13 cosmic systemd[1]: Stopped Makes a swap file on the volitile temporary drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 2555810 and the job result is done.
+May 09 04:49:13 cosmic systemd[1]: Stopping Makes a swap file on the volitile temporary drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 2555810.
+May 09 04:49:13 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 2555810.
+May 09 04:49:24 cosmic makeswap.sh[766645]: Setting up swapspace version 1, size = 256 MiB (268431360 bytes)
+May 09 04:49:24 cosmic makeswap.sh[766645]: no label, UUID=5c7854f3-ac4f-4c63-b52b-5f83336d03e7
+May 09 04:49:24 cosmic systemd[1]: Finished Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 2555810.
+May 09 06:45:39 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 09 06:45:39 cosmic systemd[1]: Stopped Makes a swap file on the volitile temporary drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 2614818 and the job result is done.
+-- Reboot --
+May 09 06:46:07 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 120.
+May 09 06:46:08 cosmic makeswap.sh[1116]: swapoff: /mnt/pagefile: swapoff failed: Invalid argument
+May 09 06:46:08 cosmic makeswap.sh[1147]: Setting up swapspace version 1, size = 256 MiB (268431360 bytes)
+May 09 06:46:08 cosmic makeswap.sh[1147]: no label, UUID=e0305fb5-f450-4f9d-b41d-0621131ff37f
+May 09 06:46:08 cosmic systemd[1]: Finished Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 120.
+May 09 17:49:38 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 09 17:49:38 cosmic systemd[1]: Stopped Makes a swap file on the volitile temporary drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 330955 and the job result is done.
+May 09 17:49:38 cosmic systemd[1]: Stopping Makes a swap file on the volitile temporary drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 330955.
+May 09 17:49:38 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 330955.
+May 09 17:49:38 cosmic makeswap.sh[102890]: /usr/local/bin/makeswap.sh: line 142: syntax error near unexpected token `fi'
+May 09 17:49:38 cosmic makeswap.sh[102890]: /usr/local/bin/makeswap.sh: line 142: `    fi'
+May 09 17:49:38 cosmic systemd[1]: makeswap-on-azure.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- An ExecStart= process belonging to unit makeswap-on-azure.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 2.
+May 09 17:49:38 cosmic systemd[1]: makeswap-on-azure.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has entered the 'failed' state with result 'exit-code'.
+May 09 17:49:38 cosmic systemd[1]: Failed to start Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished with a failure.
+-- 
+-- The job identifier is 330955 and the job result is failed.
+May 09 17:54:09 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 333224.
+May 09 17:54:09 cosmic makeswap.sh[103563]: /usr/local/bin/makeswap.sh: line 142: syntax error near unexpected token `fi'
+May 09 17:54:09 cosmic makeswap.sh[103563]: /usr/local/bin/makeswap.sh: line 142: `    fi'
+May 09 17:54:09 cosmic systemd[1]: makeswap-on-azure.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- An ExecStart= process belonging to unit makeswap-on-azure.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 2.
+May 09 17:54:09 cosmic systemd[1]: makeswap-on-azure.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has entered the 'failed' state with result 'exit-code'.
+May 09 17:54:09 cosmic systemd[1]: Failed to start Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished with a failure.
+-- 
+-- The job identifier is 333224 and the job result is failed.
+May 09 17:55:57 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 334233.
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 132: [: -f: binary operator expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 97: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 99: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 101: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 103: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 105: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 107: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 109: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 111: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 113: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 115: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 117: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 119: [: 1918.98: integer expression expected
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Failed to calculate swap size.
+May 09 17:55:57 cosmic makeswap.sh[103902]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103877]: /usr/local/bin/makeswap.sh: line 12: /dev/stdout: No such device or address
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure
+May 09 17:55:57 cosmic makeswap.sh[103910]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103912]: fallocate: no filename specified
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Failed to allocate  to /mnt/pagefile
+May 09 17:55:57 cosmic makeswap.sh[103913]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103914]: chmod: cannot access '/mnt/pagefile': No such file or directory
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Failed to set 600 permissions on /mnt/pagefile
+May 09 17:55:57 cosmic makeswap.sh[103915]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103916]: mkswap: cannot open /mnt/pagefile: No such file or directory
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Failed to recreate swap file /mnt/pagefile
+May 09 17:55:57 cosmic makeswap.sh[103917]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103918]: swapon: cannot open /mnt/pagefile: No such file or directory
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Failed to enable the swap file /mnt/pagefile
+May 09 17:55:57 cosmic makeswap.sh[103919]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic makeswap.sh[103877]: [makeswap-on-azure]: Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure
+May 09 17:55:57 cosmic makeswap.sh[103920]: /usr/local/bin/makeswap.sh: line 18: esit: command not found
+May 09 17:55:57 cosmic systemd[1]: makeswap-on-azure.service: Main process exited, code=exited, status=127/n/a
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- An ExecStart= process belonging to unit makeswap-on-azure.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 127.
+May 09 17:55:57 cosmic systemd[1]: makeswap-on-azure.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has entered the 'failed' state with result 'exit-code'.
+May 09 17:55:57 cosmic systemd[1]: Failed to start Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished with a failure.
+-- 
+-- The job identifier is 334233 and the job result is failed.
+May 09 18:01:45 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 337174.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: /var/local/makeswap-on-azure/swap_size is not present or is not set.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Created directory /var/local/makeswap-on-azure
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Created /var/local/makeswap-on-azure/swap_size to hold swap size configuration.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Total RAM: 1918M.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: 3728 megabyes available on /dev/sdb1(rounding down for safety).
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: 3728M available disk space on /dev/sdb1.
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 09 18:01:45 cosmic makeswap.sh[104795]: fallocate: no filename specified
+May 09 18:01:45 cosmic makeswap.sh[104769]: [makeswap-on-azure]: Failed to allocate  to /mnt/pagefile
+May 09 18:01:45 cosmic systemd[1]: makeswap-on-azure.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- An ExecStart= process belonging to unit makeswap-on-azure.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+May 09 18:01:45 cosmic systemd[1]: makeswap-on-azure.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has entered the 'failed' state with result 'exit-code'.
+May 09 18:01:45 cosmic systemd[1]: Failed to start Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished with a failure.
+-- 
+-- The job identifier is 337174 and the job result is failed.
+May 09 18:08:30 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 340535.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: /var/local/makeswap-on-azure/swap_size is not present or is not set.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Created directory /var/local/makeswap-on-azure
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Created /var/local/makeswap-on-azure/swap_size to hold swap size configuration.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Total RAM: 1918M.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: 3728 megabyes available on /dev/sdb1(rounding down for safety).
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: 3728M available disk space on /dev/sdb1.
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 09 18:08:30 cosmic makeswap.sh[105758]: fallocate: no filename specified
+May 09 18:08:30 cosmic makeswap.sh[105726]: [makeswap-on-azure]: Failed to allocate 1G to /mnt/pagefile
+May 09 18:08:30 cosmic systemd[1]: makeswap-on-azure.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- An ExecStart= process belonging to unit makeswap-on-azure.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+May 09 18:08:30 cosmic systemd[1]: makeswap-on-azure.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has entered the 'failed' state with result 'exit-code'.
+May 09 18:08:30 cosmic systemd[1]: Failed to start Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished with a failure.
+-- 
+-- The job identifier is 340535 and the job result is failed.
+May 09 18:12:44 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 342804.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: /var/local/makeswap-on-azure/swap_size is not present or is not set.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Created directory /var/local/makeswap-on-azure
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Created /var/local/makeswap-on-azure/swap_size to hold swap size configuration.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Total RAM: 1918M.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: 3728 megabyes available on /dev/sdb1(rounding down for safety).
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: 3728M available disk space on /dev/sdb1.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: = Allocated 1G for /mnt/pagefile
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 09 18:12:44 cosmic makeswap.sh[106539]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 09 18:12:44 cosmic makeswap.sh[106539]: no label, UUID=0e0eb95a-708e-4054-8478-8b9ee2d177d2
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 09 18:12:44 cosmic makeswap.sh[106505]: [makeswap-on-azure]: The 1G swapfile was enabled as /mnt/pagefile.
+May 09 18:12:44 cosmic systemd[1]: Finished Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 342804.
+May 09 19:10:09 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 09 19:10:09 cosmic systemd[1]: Stopped Makes a swap file on the volitile temporary drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 371795 and the job result is done.
+May 09 19:10:09 cosmic systemd[1]: Stopping Makes a swap file on the volitile temporary drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 371795.
+May 09 19:10:09 cosmic systemd[1]: Starting Makes a swap file on the volitile temporary drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 371795.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: /var/local/makeswap-on-azure/swap_size is not present or is not set.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Created directory /var/local/makeswap-on-azure
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Created /var/local/makeswap-on-azure/swap_size to hold swap size configuration.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Total RAM: 1918M.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: 3728 megabyes available on /dev/sdb1 (rounding down for safety).
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: 3728M available disk space on /dev/sdb1.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: = Allocated 1G for /mnt/pagefile
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 09 19:10:09 cosmic makeswap.sh[115508]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 09 19:10:09 cosmic makeswap.sh[115508]: no label, UUID=0232c230-38ae-41c8-a340-e752761d4c25
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 09 19:10:09 cosmic makeswap.sh[115488]: [makeswap-on-azure]: The 1G swapfile was enabled as /mnt/pagefile.
+May 09 19:10:09 cosmic systemd[1]: Finished Makes a swap file on the volitile temporary drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 371795.
+May 11 09:53:19 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 11 09:53:19 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 1529350 and the job result is done.
+-- Reboot --
+May 11 09:53:49 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 170.
+May 11 09:53:49 cosmic cat[1044]: #!/bin/bash
+May 11 09:53:49 cosmic cat[1044]: #
+May 11 09:53:49 cosmic cat[1044]: # Creates swap file on the temp drive
+May 11 09:53:49 cosmic cat[1044]: # Use the value from the parameter file if it exists
+May 11 09:53:49 cosmic cat[1044]: # You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
+May 11 09:53:49 cosmic cat[1044]: # See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
+May 11 09:53:49 cosmic cat[1044]: readonly CONFIG_DIR='/etc/makeswap-on-azure'
+May 11 09:53:49 cosmic cat[1044]: readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
+May 11 09:53:49 cosmic cat[1044]: readonly SWAP_FILE='/mnt/pagefile'
+May 11 09:53:49 cosmic cat[1044]: # Usage: logger "This will be logged."
+May 11 09:53:49 cosmic cat[1044]: logger() {
+May 11 09:53:49 cosmic cat[1044]:     echo "[makeswap-on-azure]: $*" >&1
+May 11 09:53:49 cosmic cat[1044]: }
+May 11 09:53:49 cosmic cat[1044]: # Usage: err "This is sent to STDERR before returning 1 on exit."
+May 11 09:53:49 cosmic cat[1044]: err() {
+May 11 09:53:49 cosmic cat[1044]:     echo "[makeswap-on-azure]: $*" >&2
+May 11 09:53:49 cosmic cat[1044]:     exit 1
+May 11 09:53:49 cosmic cat[1044]: }
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: # Allocates disk space, creates swap file and enables it
+May 11 09:53:49 cosmic cat[1044]: # Globals:
+May 11 09:53:49 cosmic cat[1044]: #   PARAMETER_FILE
+May 11 09:53:49 cosmic cat[1044]: #   SWAP_FILE
+May 11 09:53:49 cosmic cat[1044]: # Arguments:
+May 11 09:53:49 cosmic cat[1044]: #   None
+May 11 09:53:49 cosmic cat[1044]: # Returns:
+May 11 09:53:49 cosmic cat[1044]: #   0 or non-zero on error.
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: commit_swap() {
+May 11 09:53:49 cosmic cat[1044]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 09:53:49 cosmic cat[1044]:     local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 09:53:49 cosmic cat[1044]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     
+May 11 09:53:49 cosmic cat[1044]:     fallocate -l $SWAP_SIZE $SWAP_FILE
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "Failed to allocate $SWAP_FILE to $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     chmod 600 "$SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "Set 600 permissions on $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "Failed to set 600 permissions on $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     mkswap "$SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "Recreated swap file $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "Failed to recreate swap file $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     swapon $SWAP_FILE
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "The ${SWAP_FILE} swap file was enabled as $SWAP_FILE."
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "Failed to enable the swap file $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]: }
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: # Turns off he swap function and deletes the swap file
+May 11 09:53:49 cosmic cat[1044]: # Globals:
+May 11 09:53:49 cosmic cat[1044]: #   PARAMETER_FILE
+May 11 09:53:49 cosmic cat[1044]: # Arguments:
+May 11 09:53:49 cosmic cat[1044]: #   None
+May 11 09:53:49 cosmic cat[1044]: # Returns:
+May 11 09:53:49 cosmic cat[1044]: #   0 or non-zero on error.
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: remove_swap() {
+May 11 09:53:49 cosmic cat[1044]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 09:53:49 cosmic cat[1044]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 09:53:49 cosmic cat[1044]:     if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     if [ -f "$SWAP_FILE" ] ; then
+May 11 09:53:49 cosmic cat[1044]:         logger "Swap file already exists, removing it."
+May 11 09:53:49 cosmic cat[1044]:         swapoff "$SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:         if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:             logger "Swap disabled."
+May 11 09:53:49 cosmic cat[1044]:         else
+May 11 09:53:49 cosmic cat[1044]:             err  "Failed to disable swap."
+May 11 09:53:49 cosmic cat[1044]:         fi
+May 11 09:53:49 cosmic cat[1044]:         rm $SWAP_FILE
+May 11 09:53:49 cosmic cat[1044]:         if (($? == 0)); then
+May 11 09:53:49 cosmic cat[1044]:             logger "$SWAP_FILE was removed."
+May 11 09:53:49 cosmic cat[1044]:         else
+May 11 09:53:49 cosmic cat[1044]:             err "Failed to remove swap file from $SWAP_FILE"
+May 11 09:53:49 cosmic cat[1044]:         fi
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]: }
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: # Calculate size of swap appropriate with respect to space and memory
+May 11 09:53:49 cosmic cat[1044]: # Globals:
+May 11 09:53:49 cosmic cat[1044]: #   PARAMETER_FILE
+May 11 09:53:49 cosmic cat[1044]: # Arguments:
+May 11 09:53:49 cosmic cat[1044]: #   None
+May 11 09:53:49 cosmic cat[1044]: # Returns:
+May 11 09:53:49 cosmic cat[1044]: #   0 if calculation completed, non-zero on error.
+May 11 09:53:49 cosmic cat[1044]: #######################################
+May 11 09:53:49 cosmic cat[1044]: calculate_swap_size() {
+May 11 09:53:49 cosmic cat[1044]:     local readonly FILESYSTEM=$(df | grep /mnt | gawk '{print $1}')
+May 11 09:53:49 cosmic cat[1044]:     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
+May 11 09:53:49 cosmic cat[1044]:     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
+May 11 09:53:49 cosmic cat[1044]:     # lop off decimals with int(float)
+May 11 09:53:49 cosmic cat[1044]:     local memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
+May 11 09:53:49 cosmic cat[1044]:     logger "Total RAM: ${memTotal}M."
+May 11 09:53:49 cosmic cat[1044]:     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
+May 11 09:53:49 cosmic cat[1044]:     local FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4/1024)}')
+May 11 09:53:49 cosmic cat[1044]:     logger "$FREE_DISK_SPACE megabyes available on $FILESYSTEM (rounding down for safety)."
+May 11 09:53:49 cosmic cat[1044]:     if [ $FREE_DISK_SPACE -gt 0 ]; then
+May 11 09:53:49 cosmic cat[1044]:         logger "${FREE_DISK_SPACE}M available disk space on $FILESYSTEM."
+May 11 09:53:49 cosmic cat[1044]:     else
+May 11 09:53:49 cosmic cat[1044]:         err "{FREE_DISK_SPACE} bytes is not enough to proceed. Please free up some space on $FILESYSTEM."
+May 11 09:53:49 cosmic cat[1044]:     fi
+May 11 09:53:49 cosmic cat[1044]:     # Fork me ¯\_(ツ)_/¯
+May 11 09:53:50 cosmic cat[1044]:     if [ $FREE_DISK_SPACE -ge 256 ]; then
+May 11 09:53:50 cosmic cat[1044]:         if [ $memTotal -lt 512 ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 256M > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 1024 ] && [ 512 -le $FREE_DISK_SPACE ];then
+May 11 09:53:50 cosmic cat[1044]:             echo 512M > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 3072 ] && [ 1024 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 1G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 4096 ] && [ 2048 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 2G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 6144 ] && [ 4096 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 4G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 7168 ] && [ 6144 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 6G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 8192 ] && [ 7168 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 7G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 12288 ] && [ 8192 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 8G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le 16384 ] && [ 12288 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 12G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -ge 16384 ] && [ 16384 -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo 16G > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         elif [ $memTotal -le $FREE_DISK_SPACE ]; then
+May 11 09:53:50 cosmic cat[1044]:             echo "${FREE_DISK_SPACE}M" > $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         else
+May 11 09:53:50 cosmic cat[1044]:             err "Failed to calculate swap size."
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:     fi
+May 11 09:53:50 cosmic cat[1044]:     logger "Calculated swap size of $(cat $PARAMETER_FILE)."
+May 11 09:53:50 cosmic cat[1044]: }
+May 11 09:53:50 cosmic cat[1044]: #######################################
+May 11 09:53:50 cosmic cat[1044]: # Program flow structure. Called from final line.
+May 11 09:53:50 cosmic cat[1044]: # Globals:
+May 11 09:53:50 cosmic cat[1044]: #   PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]: #   SWAP_FILE
+May 11 09:53:50 cosmic cat[1044]: # Arguments:
+May 11 09:53:50 cosmic cat[1044]: #   None
+May 11 09:53:50 cosmic cat[1044]: #######################################
+May 11 09:53:50 cosmic cat[1044]: main() {
+May 11 09:53:50 cosmic cat[1044]:     if [ -f "$PARAMETER_FILE" ]; then
+May 11 09:53:50 cosmic cat[1044]:         logger "Found $PARAMETER_FILE."
+May 11 09:53:50 cosmic cat[1044]:         if [[ ! -z $PARAMETER_FILE ]]; then
+May 11 09:53:50 cosmic cat[1044]:             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
+May 11 09:53:50 cosmic cat[1044]:             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 09:53:50 cosmic cat[1044]:             logger "Set the swap size to $SWAP_SIZE"
+May 11 09:53:50 cosmic cat[1044]:         else
+May 11 09:53:50 cosmic cat[1044]:             err "$PARAMETER_FILE is not set."
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:     fi
+May 11 09:53:50 cosmic cat[1044]:     if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
+May 11 09:53:50 cosmic cat[1044]:         logger "$PARAMETER_FILE is not present or is not set."
+May 11 09:53:50 cosmic cat[1044]:         mkdir -p "$CONFIG_DIR"
+May 11 09:53:50 cosmic cat[1044]:         if (($? == 0)); then
+May 11 09:53:50 cosmic cat[1044]:             logger "Created directory $CONFIG_DIR"
+May 11 09:53:50 cosmic cat[1044]:         else
+May 11 09:53:50 cosmic cat[1044]:             err "Failed create directory $CONFIG_DIR"
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:         touch $PARAMETER_FILE
+May 11 09:53:50 cosmic cat[1044]:         if (($? == 0)); then
+May 11 09:53:50 cosmic cat[1044]:             logger "Created $PARAMETER_FILE to hold swap size configuration."
+May 11 09:53:50 cosmic cat[1044]:         else
+May 11 09:53:50 cosmic cat[1044]:             err "Failed to create configuration file $PARAMETER_FILE"
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:         if [ -f $SWAP_FILE ]; then
+May 11 09:53:50 cosmic cat[1044]:             logger "Removing a swap file that is already present."
+May 11 09:53:50 cosmic cat[1044]:             remove_swap
+May 11 09:53:50 cosmic cat[1044]:             if (($? != 0)); then
+May 11 09:53:50 cosmic cat[1044]:                 err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
+May 11 09:53:50 cosmic cat[1044]:             fi
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:         logger "Calulating appropriate swap size."
+May 11 09:53:50 cosmic cat[1044]:         calculate_swap_size
+May 11 09:53:50 cosmic cat[1044]:         if (($? != 0)); then
+May 11 09:53:50 cosmic cat[1044]:             err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
+May 11 09:53:50 cosmic cat[1044]:         fi
+May 11 09:53:50 cosmic cat[1044]:     fi
+May 11 09:53:50 cosmic cat[1044]:     commit_swap
+May 11 09:53:50 cosmic cat[1044]:     if (($? != 0)); then
+May 11 09:53:50 cosmic cat[1044]:         err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%202"
+May 11 09:53:50 cosmic cat[1044]:     fi
+May 11 09:53:50 cosmic cat[1044]: }
+May 11 09:53:50 cosmic cat[1044]: main "$@"
+May 11 09:53:50 cosmic ls[1080]: -rw-rw-r-- 1 louis louis 7.6K May 11 06:44 /usr/sbin/makeswap
+May 11 09:53:50 cosmic makeswap[1123]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 11 09:53:50 cosmic makeswap[1123]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 11 09:53:50 cosmic makeswap[1123]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 11 09:53:50 cosmic makeswap[1123]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 11 09:53:50 cosmic makeswap[1123]: [makeswap-on-azure]: Total RAM: 1918M.
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: 3728 megabyes available on /dev/sda1 (rounding down for safety).
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1.
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 11 09:53:51 cosmic makeswap[1228]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 11 09:53:51 cosmic makeswap[1228]: no label, UUID=8ccc2682-4c6a-4662-ad7e-2abd1b88d237
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 11 09:53:51 cosmic makeswap[1123]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 11 09:53:51 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 170.
+May 11 12:40:30 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 11 12:40:30 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 83630 and the job result is done.
+May 11 12:40:30 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 83630.
+May 11 12:40:30 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 83630.
+May 11 12:40:30 cosmic cat[30119]: #!/bin/bash
+May 11 12:40:30 cosmic cat[30119]: #
+May 11 12:40:30 cosmic cat[30119]: # Creates swap file on the temp drive
+May 11 12:40:30 cosmic cat[30119]: # Use the value from the parameter file if it exists
+May 11 12:40:30 cosmic cat[30119]: # You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
+May 11 12:40:30 cosmic cat[30119]: # See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
+May 11 12:40:30 cosmic cat[30119]: readonly CONFIG_DIR='/etc/makeswap-on-azure'
+May 11 12:40:30 cosmic cat[30119]: readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
+May 11 12:40:30 cosmic cat[30119]: readonly SWAP_FILE='/mnt/pagefile'
+May 11 12:40:30 cosmic cat[30119]: # Usage: logger "This will be logged."
+May 11 12:40:30 cosmic cat[30119]: logger() {
+May 11 12:40:30 cosmic cat[30119]:     echo "[makeswap-on-azure]: $*" >&1
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: # Usage: err "This is sent to STDERR before returning 1 on exit."
+May 11 12:40:30 cosmic cat[30119]: err() {
+May 11 12:40:30 cosmic cat[30119]:     echo "[makeswap-on-azure]: $*" >&2
+May 11 12:40:30 cosmic cat[30119]:     exit 1
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: # Allocates disk space, creates swap file and enables it
+May 11 12:40:30 cosmic cat[30119]: # Globals:
+May 11 12:40:30 cosmic cat[30119]: #   PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]: #   SWAP_FILE
+May 11 12:40:30 cosmic cat[30119]: # Arguments:
+May 11 12:40:30 cosmic cat[30119]: #   None
+May 11 12:40:30 cosmic cat[30119]: # Returns:
+May 11 12:40:30 cosmic cat[30119]: #   0 or non-zero on error.
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: commit_swap() {
+May 11 12:40:30 cosmic cat[30119]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 12:40:30 cosmic cat[30119]:     local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 12:40:30 cosmic cat[30119]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     
+May 11 12:40:30 cosmic cat[30119]:     fallocate -l $SWAP_SIZE $SWAP_FILE
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "Failed to allocate $SWAP_FILE to $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     chmod 600 "$SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "Set 600 permissions on $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "Failed to set 600 permissions on $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     mkswap "$SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "Recreated swap file $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "Failed to recreate swap file $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     swapon $SWAP_FILE
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "The ${SWAP_FILE} swap file was enabled as $SWAP_FILE."
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "Failed to enable the swap file $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: # Turns off he swap function and deletes the swap file
+May 11 12:40:30 cosmic cat[30119]: # Globals:
+May 11 12:40:30 cosmic cat[30119]: #   PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]: # Arguments:
+May 11 12:40:30 cosmic cat[30119]: #   None
+May 11 12:40:30 cosmic cat[30119]: # Returns:
+May 11 12:40:30 cosmic cat[30119]: #   0 or non-zero on error.
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: remove_swap() {
+May 11 12:40:30 cosmic cat[30119]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 12:40:30 cosmic cat[30119]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 12:40:30 cosmic cat[30119]:     if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     if [ -f "$SWAP_FILE" ] ; then
+May 11 12:40:30 cosmic cat[30119]:         logger "Swap file already exists, removing it."
+May 11 12:40:30 cosmic cat[30119]:         swapoff "$SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:         if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:             logger "Swap disabled."
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err  "Failed to disable swap."
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:         rm $SWAP_FILE
+May 11 12:40:30 cosmic cat[30119]:         if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:             logger "$SWAP_FILE was removed."
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err "Failed to remove swap file from $SWAP_FILE"
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: # Calculate size of swap appropriate with respect to space and memory
+May 11 12:40:30 cosmic cat[30119]: # Globals:
+May 11 12:40:30 cosmic cat[30119]: #   PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]: # Arguments:
+May 11 12:40:30 cosmic cat[30119]: #   None
+May 11 12:40:30 cosmic cat[30119]: # Returns:
+May 11 12:40:30 cosmic cat[30119]: #   0 if calculation completed, non-zero on error.
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: calculate_swap_size() {
+May 11 12:40:30 cosmic cat[30119]:     local readonly FILESYSTEM=$(df | grep /mnt | gawk '{print $1}')
+May 11 12:40:30 cosmic cat[30119]:     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
+May 11 12:40:30 cosmic cat[30119]:     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
+May 11 12:40:30 cosmic cat[30119]:     # lop off decimals with int(float)
+May 11 12:40:30 cosmic cat[30119]:     local memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
+May 11 12:40:30 cosmic cat[30119]:     logger "Total RAM: ${memTotal}M."
+May 11 12:40:30 cosmic cat[30119]:     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
+May 11 12:40:30 cosmic cat[30119]:     local FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4/1024)}')
+May 11 12:40:30 cosmic cat[30119]:     logger "$FREE_DISK_SPACE megabyes available on $FILESYSTEM (rounding down for safety)."
+May 11 12:40:30 cosmic cat[30119]:     if [ $FREE_DISK_SPACE -gt 0 ]; then
+May 11 12:40:30 cosmic cat[30119]:         logger "${FREE_DISK_SPACE}M available disk space on $FILESYSTEM."
+May 11 12:40:30 cosmic cat[30119]:     else
+May 11 12:40:30 cosmic cat[30119]:         err "{FREE_DISK_SPACE} bytes is not enough to proceed. Please free up some space on $FILESYSTEM."
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     # Fork me ¯\_(ツ)_/¯
+May 11 12:40:30 cosmic ls[30120]: -rwx------ 1 louis louis 7.6K May 11 09:53 /usr/sbin/makeswap
+May 11 12:40:30 cosmic cat[30119]:     if [ $FREE_DISK_SPACE -ge 256 ]; then
+May 11 12:40:30 cosmic cat[30119]:         if [ $memTotal -lt 512 ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 256M > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 1024 ] && [ 512 -le $FREE_DISK_SPACE ];then
+May 11 12:40:30 cosmic cat[30119]:             echo 512M > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 3072 ] && [ 1024 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 1G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 4096 ] && [ 2048 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 2G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 6144 ] && [ 4096 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 4G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 7168 ] && [ 6144 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 6G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 8192 ] && [ 7168 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 7G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 12288 ] && [ 8192 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 8G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le 16384 ] && [ 12288 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 12G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -ge 16384 ] && [ 16384 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo 16G > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         elif [ $memTotal -le $FREE_DISK_SPACE ]; then
+May 11 12:40:30 cosmic cat[30119]:             echo "${FREE_DISK_SPACE}M" > $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err "Failed to calculate swap size."
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     logger "Calculated swap size of $(cat $PARAMETER_FILE)."
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: # Program flow structure. Called from final line.
+May 11 12:40:30 cosmic cat[30119]: # Globals:
+May 11 12:40:30 cosmic cat[30119]: #   PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]: #   SWAP_FILE
+May 11 12:40:30 cosmic cat[30119]: # Arguments:
+May 11 12:40:30 cosmic cat[30119]: #   None
+May 11 12:40:30 cosmic cat[30119]: #######################################
+May 11 12:40:30 cosmic cat[30119]: main() {
+May 11 12:40:30 cosmic cat[30119]:     if [ -f "$PARAMETER_FILE" ]; then
+May 11 12:40:30 cosmic cat[30119]:         logger "Found $PARAMETER_FILE."
+May 11 12:40:30 cosmic cat[30119]:         if [[ ! -z $PARAMETER_FILE ]]; then
+May 11 12:40:30 cosmic cat[30119]:             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
+May 11 12:40:30 cosmic cat[30119]:             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 12:40:30 cosmic cat[30119]:             logger "Set the swap size to $SWAP_SIZE"
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err "$PARAMETER_FILE is not set."
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
+May 11 12:40:30 cosmic cat[30119]:         logger "$PARAMETER_FILE is not present or is not set."
+May 11 12:40:30 cosmic cat[30119]:         mkdir -p "$CONFIG_DIR"
+May 11 12:40:30 cosmic cat[30119]:         if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:             logger "Created directory $CONFIG_DIR"
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err "Failed create directory $CONFIG_DIR"
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:         touch $PARAMETER_FILE
+May 11 12:40:30 cosmic cat[30119]:         if (($? == 0)); then
+May 11 12:40:30 cosmic cat[30119]:             logger "Created $PARAMETER_FILE to hold swap size configuration."
+May 11 12:40:30 cosmic cat[30119]:         else
+May 11 12:40:30 cosmic cat[30119]:             err "Failed to create configuration file $PARAMETER_FILE"
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:         if [ -f $SWAP_FILE ]; then
+May 11 12:40:30 cosmic cat[30119]:             logger "Removing a swap file that is already present."
+May 11 12:40:30 cosmic cat[30119]:             remove_swap
+May 11 12:40:30 cosmic cat[30119]:             if (($? != 0)); then
+May 11 12:40:30 cosmic cat[30119]:                 err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
+May 11 12:40:30 cosmic cat[30119]:             fi
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:         logger "Calulating appropriate swap size."
+May 11 12:40:30 cosmic cat[30119]:         calculate_swap_size
+May 11 12:40:30 cosmic cat[30119]:         if (($? != 0)); then
+May 11 12:40:30 cosmic cat[30119]:             err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
+May 11 12:40:30 cosmic cat[30119]:         fi
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]:     commit_swap
+May 11 12:40:30 cosmic cat[30119]:     if (($? != 0)); then
+May 11 12:40:30 cosmic cat[30119]:         err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%202"
+May 11 12:40:30 cosmic cat[30119]:     fi
+May 11 12:40:30 cosmic cat[30119]: }
+May 11 12:40:30 cosmic cat[30119]: main "$@"
+May 11 12:40:30 cosmic makeswap[30124]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 11 12:40:30 cosmic makeswap[30124]: [makeswap-on-azure]: Set the swap size to 262144
+May 11 12:40:30 cosmic makeswap[30124]: /usr/sbin/makeswap: line 35: local: SWAP_SIZE: readonly variable
+May 11 12:40:30 cosmic makeswap[30124]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 11 12:40:30 cosmic makeswap[30128]: fallocate: fallocate failed: Text file busy
+May 11 12:40:30 cosmic makeswap[30124]: [makeswap-on-azure]: Failed to allocate /mnt/pagefile to /mnt/pagefile
+May 11 12:40:30 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 83630.
+May 11 12:40:40 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 11 12:40:40 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 83798 and the job result is done.
+May 11 12:40:40 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 83798.
+May 11 12:40:40 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 83798.
+May 11 12:40:40 cosmic cat[30159]: #!/bin/bash
+May 11 12:40:40 cosmic cat[30159]: #
+May 11 12:40:40 cosmic cat[30159]: # Creates swap file on the temp drive
+May 11 12:40:40 cosmic cat[30159]: # Use the value from the parameter file if it exists
+May 11 12:40:40 cosmic cat[30159]: # You can always set /etc/makeswap-on-azure/swap_size to your desired size and restart service.
+May 11 12:40:40 cosmic cat[30159]: # See https://github.com/soyfrien/makeswap-on-azure.service#adjust-size-of-virtual-memory
+May 11 12:40:40 cosmic cat[30159]: readonly CONFIG_DIR='/etc/makeswap-on-azure'
+May 11 12:40:40 cosmic cat[30159]: readonly PARAMETER_FILE="$CONFIG_DIR/swap_size"
+May 11 12:40:40 cosmic cat[30159]: readonly SWAP_FILE='/mnt/pagefile'
+May 11 12:40:40 cosmic cat[30159]: # Usage: logger "This will be logged."
+May 11 12:40:40 cosmic cat[30159]: logger() {
+May 11 12:40:40 cosmic cat[30159]:     echo "[makeswap-on-azure]: $*" >&1
+May 11 12:40:40 cosmic cat[30159]: }
+May 11 12:40:40 cosmic cat[30159]: # Usage: err "This is sent to STDERR before returning 1 on exit."
+May 11 12:40:40 cosmic cat[30159]: err() {
+May 11 12:40:40 cosmic cat[30159]:     echo "[makeswap-on-azure]: $*" >&2
+May 11 12:40:40 cosmic cat[30159]:     exit 1
+May 11 12:40:40 cosmic cat[30159]: }
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: # Allocates disk space, creates swap file and enables it
+May 11 12:40:40 cosmic cat[30159]: # Globals:
+May 11 12:40:40 cosmic cat[30159]: #   PARAMETER_FILE
+May 11 12:40:40 cosmic cat[30159]: #   SWAP_FILE
+May 11 12:40:40 cosmic cat[30159]: # Arguments:
+May 11 12:40:40 cosmic cat[30159]: #   None
+May 11 12:40:40 cosmic cat[30159]: # Returns:
+May 11 12:40:40 cosmic cat[30159]: #   0 or non-zero on error.
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: commit_swap() {
+May 11 12:40:40 cosmic cat[30159]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 12:40:40 cosmic cat[30159]:     local readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 12:40:40 cosmic cat[30159]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]:     
+May 11 12:40:40 cosmic cat[30159]:     fallocate -l $SWAP_SIZE $SWAP_FILE
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "Failed to allocate $SWAP_FILE to $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]:     chmod 600 "$SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "Set 600 permissions on $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "Failed to set 600 permissions on $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]:     mkswap "$SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "Recreated swap file $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "Failed to recreate swap file $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]:     swapon $SWAP_FILE
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "The ${SWAP_FILE} swap file was enabled as $SWAP_FILE."
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "Failed to enable the swap file $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]: }
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: # Turns off he swap function and deletes the swap file
+May 11 12:40:40 cosmic cat[30159]: # Globals:
+May 11 12:40:40 cosmic cat[30159]: #   PARAMETER_FILE
+May 11 12:40:40 cosmic cat[30159]: # Arguments:
+May 11 12:40:40 cosmic cat[30159]: #   None
+May 11 12:40:40 cosmic cat[30159]: # Returns:
+May 11 12:40:40 cosmic cat[30159]: #   0 or non-zero on error.
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: remove_swap() {
+May 11 12:40:40 cosmic cat[30159]:     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+May 11 12:40:40 cosmic cat[30159]:     chmod ugo+w "$PARAMETER_FILE"
+May 11 12:40:40 cosmic cat[30159]:     if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:         logger "chmod ugo+w $PARAMETER_FILE"
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic cat[30159]:         err "chmod ugo+w $PARAMETER_FILE failed"
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]:     if [ -f "$SWAP_FILE" ] ; then
+May 11 12:40:40 cosmic cat[30159]:         logger "Swap file already exists, removing it."
+May 11 12:40:40 cosmic cat[30159]:         swapoff "$SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:         if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:             logger "Swap disabled."
+May 11 12:40:40 cosmic cat[30159]:         else
+May 11 12:40:40 cosmic cat[30159]:             err  "Failed to disable swap."
+May 11 12:40:40 cosmic cat[30159]:         fi
+May 11 12:40:40 cosmic cat[30159]:         rm $SWAP_FILE
+May 11 12:40:40 cosmic cat[30159]:         if (($? == 0)); then
+May 11 12:40:40 cosmic cat[30159]:             logger "$SWAP_FILE was removed."
+May 11 12:40:40 cosmic cat[30159]:         else
+May 11 12:40:40 cosmic cat[30159]:             err "Failed to remove swap file from $SWAP_FILE"
+May 11 12:40:40 cosmic cat[30159]:         fi
+May 11 12:40:40 cosmic cat[30159]:     fi
+May 11 12:40:40 cosmic cat[30159]: }
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: # Calculate size of swap appropriate with respect to space and memory
+May 11 12:40:40 cosmic cat[30159]: # Globals:
+May 11 12:40:40 cosmic cat[30159]: #   PARAMETER_FILE
+May 11 12:40:40 cosmic cat[30159]: # Arguments:
+May 11 12:40:40 cosmic cat[30159]: #   None
+May 11 12:40:40 cosmic cat[30159]: # Returns:
+May 11 12:40:40 cosmic cat[30159]: #   0 if calculation completed, non-zero on error.
+May 11 12:40:40 cosmic cat[30159]: #######################################
+May 11 12:40:40 cosmic cat[30159]: calculate_swap_size() {
+May 11 12:40:40 cosmic cat[30159]:     local readonly FILESYSTEM=$(df | grep /mnt | gawk '{print $1}')
+May 11 12:40:40 cosmic cat[30159]:     # Azure won't give you the full amount of RAM as some of it is taken by platform services.
+May 11 12:40:40 cosmic cat[30159]:     # Approximating 512 MiB to 512 * 1024, and so on, is close enough for these increments
+May 11 12:40:40 cosmic cat[30159]:     # lop off decimals with int(float)
+May 11 12:40:40 cosmic cat[30159]:     local memTotal=$(cat /proc/meminfo | grep MemTotal | gawk '{print int($2/1024)}')
+May 11 12:40:40 cosmic cat[30159]:     logger "Total RAM: ${memTotal}M."
+May 11 12:40:40 cosmic cat[30159]:     # Kilobyes/1024+0.5 is good for general rounding, but we don't want more than is available
+May 11 12:40:40 cosmic cat[30159]:     local FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4/1024)}')
+May 11 12:40:40 cosmic cat[30159]:     logger "$FREE_DISK_SPACE megabyes available on $FILESYSTEM (rounding down for safety)."
+May 11 12:40:40 cosmic cat[30159]:     if [ $FREE_DISK_SPACE -gt 0 ]; then
+May 11 12:40:40 cosmic cat[30159]:         logger "${FREE_DISK_SPACE}M available disk space on $FILESYSTEM."
+May 11 12:40:40 cosmic cat[30159]:     else
+May 11 12:40:40 cosmic ls[30160]: -rwx------ 1 louis louis 7.6K May 11 12:40 /usr/sbin/makeswap
+May 11 12:40:41 cosmic cat[30159]:         err "{FREE_DISK_SPACE} bytes is not enough to proceed. Please free up some space on $FILESYSTEM."
+May 11 12:40:41 cosmic cat[30159]:     fi
+May 11 12:40:41 cosmic cat[30159]:     # Fork me ¯\_(ツ)_/¯
+May 11 12:40:41 cosmic cat[30159]:     if [ $FREE_DISK_SPACE -ge 256 ]; then
+May 11 12:40:41 cosmic cat[30159]:         if [ $memTotal -lt 512 ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 256M > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 1024 ] && [ 512 -le $FREE_DISK_SPACE ];then
+May 11 12:40:41 cosmic cat[30159]:             echo 512M > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 3072 ] && [ 1024 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 1G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 4096 ] && [ 2048 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 2G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 6144 ] && [ 4096 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 4G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 7168 ] && [ 6144 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 6G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 8192 ] && [ 7168 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 7G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 12288 ] && [ 8192 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 8G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le 16384 ] && [ 12288 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 12G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -ge 16384 ] && [ 16384 -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo 16G > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         elif [ $memTotal -le $FREE_DISK_SPACE ]; then
+May 11 12:40:41 cosmic cat[30159]:             echo "${FREE_DISK_SPACE}M" > $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         else
+May 11 12:40:41 cosmic cat[30159]:             err "Failed to calculate swap size."
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:     fi
+May 11 12:40:41 cosmic cat[30159]:     logger "Calculated swap size of $(cat $PARAMETER_FILE)."
+May 11 12:40:41 cosmic cat[30159]: }
+May 11 12:40:41 cosmic cat[30159]: #######################################
+May 11 12:40:41 cosmic cat[30159]: # Program flow structure. Called from final line.
+May 11 12:40:41 cosmic cat[30159]: # Globals:
+May 11 12:40:41 cosmic cat[30159]: #   PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]: #   SWAP_FILE
+May 11 12:40:41 cosmic cat[30159]: # Arguments:
+May 11 12:40:41 cosmic cat[30159]: #   None
+May 11 12:40:41 cosmic cat[30159]: #######################################
+May 11 12:40:41 cosmic cat[30159]: main() {
+May 11 12:40:41 cosmic cat[30159]:     if [ -f "$PARAMETER_FILE" ]; then
+May 11 12:40:41 cosmic cat[30159]:         logger "Found $PARAMETER_FILE."
+May 11 12:40:41 cosmic cat[30159]:         if [[ ! -z $PARAMETER_FILE ]]; then
+May 11 12:40:41 cosmic cat[30159]:             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
+May 11 12:40:41 cosmic cat[30159]:             readonly SWAP_SIZE=$(cat $PARAMETER_FILE)
+May 11 12:40:41 cosmic cat[30159]:             logger "Set the swap size to $SWAP_SIZE"
+May 11 12:40:41 cosmic cat[30159]:         else
+May 11 12:40:41 cosmic cat[30159]:             err "$PARAMETER_FILE is not set."
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:     fi
+May 11 12:40:41 cosmic cat[30159]:     if [ ! -f $PARAMETER_FILE ] || [ -z $SWAP_SIZE ]; then
+May 11 12:40:41 cosmic cat[30159]:         logger "$PARAMETER_FILE is not present or is not set."
+May 11 12:40:41 cosmic cat[30159]:         mkdir -p "$CONFIG_DIR"
+May 11 12:40:41 cosmic cat[30159]:         if (($? == 0)); then
+May 11 12:40:41 cosmic cat[30159]:             logger "Created directory $CONFIG_DIR"
+May 11 12:40:41 cosmic cat[30159]:         else
+May 11 12:40:41 cosmic cat[30159]:             err "Failed create directory $CONFIG_DIR"
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:         touch $PARAMETER_FILE
+May 11 12:40:41 cosmic cat[30159]:         if (($? == 0)); then
+May 11 12:40:41 cosmic cat[30159]:             logger "Created $PARAMETER_FILE to hold swap size configuration."
+May 11 12:40:41 cosmic cat[30159]:         else
+May 11 12:40:41 cosmic cat[30159]:             err "Failed to create configuration file $PARAMETER_FILE"
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:         if [ -f $SWAP_FILE ]; then
+May 11 12:40:41 cosmic cat[30159]:             logger "Removing a swap file that is already present."
+May 11 12:40:41 cosmic cat[30159]:             remove_swap
+May 11 12:40:41 cosmic cat[30159]:             if (($? != 0)); then
+May 11 12:40:41 cosmic cat[30159]:                 err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
+May 11 12:40:41 cosmic cat[30159]:             fi
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:         logger "Calulating appropriate swap size."
+May 11 12:40:41 cosmic cat[30159]:         calculate_swap_size
+May 11 12:40:41 cosmic cat[30159]:         if (($? != 0)); then
+May 11 12:40:41 cosmic cat[30159]:             err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
+May 11 12:40:41 cosmic cat[30159]:         fi
+May 11 12:40:41 cosmic cat[30159]:     fi
+May 11 12:40:41 cosmic cat[30159]:     commit_swap
+May 11 12:40:41 cosmic cat[30159]:     if (($? != 0)); then
+May 11 12:40:41 cosmic cat[30159]:         err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%202"
+May 11 12:40:41 cosmic cat[30159]:     fi
+May 11 12:40:41 cosmic cat[30159]: }
+May 11 12:40:41 cosmic cat[30159]: main "$@"
+May 11 12:40:41 cosmic makeswap[30164]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 11 12:40:41 cosmic makeswap[30164]: [makeswap-on-azure]: Set the swap size to 262144
+May 11 12:40:41 cosmic makeswap[30164]: /usr/sbin/makeswap: line 35: local: SWAP_SIZE: readonly variable
+May 11 12:40:41 cosmic makeswap[30164]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 11 12:40:41 cosmic makeswap[30168]: fallocate: fallocate failed: Text file busy
+May 11 12:40:41 cosmic makeswap[30164]: [makeswap-on-azure]: Failed to allocate /mnt/pagefile to /mnt/pagefile
+May 11 12:40:41 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 83798.
+May 14 05:57:08 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 05:57:08 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 2031294 and the job result is done.
+May 14 05:57:08 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 2031294.
+May 14 05:57:08 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 2031294.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Total RAM: 1918M.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 05:57:08 cosmic makeswap[599681]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 05:57:08 cosmic makeswap[599681]: no label, UUID=d8a0cf92-bb67-4e60-85bf-93fd1b734034
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 05:57:08 cosmic makeswap[599660]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 05:57:08 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 2031294.
+May 14 06:09:46 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 06:09:46 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 2038142 and the job result is done.
+-- Reboot --
+May 14 06:12:17 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1906.
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: Set the swap size to 1G
+May 14 06:12:17 cosmic makeswap[5042]: /usr/sbin/makeswap: line 34: local: SWAP_SIZE: readonly variable
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 06:12:17 cosmic makeswap[5057]: mkswap: /mnt/pagefile: warning: wiping old swap signature.
+May 14 06:12:17 cosmic makeswap[5057]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 06:12:17 cosmic makeswap[5057]: no label, UUID=b272b8e5-48b0-4a00-8138-0534e4929b47
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 06:12:17 cosmic makeswap[5042]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 06:12:17 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 1906.
+May 14 06:36:51 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 06:36:51 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 14700 and the job result is done.
+May 14 06:36:51 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 14700.
+May 14 06:36:51 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 14700.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Total RAM: 1918M.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: 3728M available disk space on /dev/sdc1 (rounding down for safety).
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 06:36:51 cosmic makeswap[9611]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 06:36:51 cosmic makeswap[9611]: no label, UUID=338cb87f-effc-406c-b3f5-e50c03abeec6
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 06:36:51 cosmic makeswap[9584]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 06:36:51 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 14700.
+May 14 06:50:23 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 06:50:23 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 22120 and the job result is done.
+May 14 06:50:23 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 22120.
+May 14 06:50:23 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 22120.
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: Set the swap size to 1G
+May 14 06:50:23 cosmic makeswap[12245]: /usr/sbin/makeswap: line 34: local: SWAP_SIZE: readonly variable
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 06:50:23 cosmic makeswap[12259]: mkswap: /mnt/pagefile: warning: wiping old swap signature.
+May 14 06:50:23 cosmic makeswap[12259]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 06:50:23 cosmic makeswap[12259]: no label, UUID=5d7c7249-0829-4812-b546-405bfc39c0e7
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 06:50:23 cosmic makeswap[12245]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 06:50:23 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 22120.
+May 14 06:50:43 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 06:50:43 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 22457 and the job result is done.
+May 14 06:50:43 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 22457.
+May 14 06:50:43 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 22457.
+May 14 06:50:43 cosmic makeswap[12362]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 14 06:50:43 cosmic makeswap[12362]: [makeswap-on-azure]: Set the swap size to 1G
+May 14 06:50:43 cosmic makeswap[12362]: /usr/sbin/makeswap: line 34: local: SWAP_SIZE: readonly variable
+May 14 06:50:43 cosmic makeswap[12362]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:50:43 cosmic makeswap[12366]: fallocate: fallocate failed: Text file busy
+May 14 06:50:43 cosmic makeswap[12362]: [makeswap-on-azure]: Failed to allocate 1G to /mnt/pagefile
+May 14 06:50:43 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 22457.
+-- Reboot --
+May 14 06:54:40 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1726.
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: Removing a swap file that is already present.
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: Swap file already exists, removing it.
+May 14 06:54:40 cosmic makeswap[2789]: swapoff: /mnt/pagefile: swapoff failed: Invalid argument
+May 14 06:54:40 cosmic makeswap[2785]: [makeswap-on-azure]: Failed to disable swap.
+May 14 06:54:40 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 1726.
+May 14 06:59:59 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 06:59:59 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 4502 and the job result is done.
+May 14 06:59:59 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 4502.
+May 14 06:59:59 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 4502.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Total RAM: 1918M.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 06:59:59 cosmic makeswap[3707]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 06:59:59 cosmic makeswap[3707]: no label, UUID=0d10945f-0f4d-4406-a0e7-b324ebe28d71
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 06:59:59 cosmic makeswap[3673]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 06:59:59 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 4502.
+May 14 07:05:50 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 07:05:50 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 7443 and the job result is done.
+May 14 07:05:50 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 7443.
+May 14 07:05:50 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 7443.
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: Set the swap size to 1G
+May 14 07:05:50 cosmic makeswap[4607]: /usr/sbin/makeswap: line 34: local: SWAP_SIZE: readonly variable
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 07:05:50 cosmic makeswap[4621]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 07:05:50 cosmic makeswap[4621]: no label, UUID=afcc7f15-e817-4ce3-b5db-d8d8eaf75084
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 07:05:50 cosmic makeswap[4607]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 07:05:50 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 7443.
+May 14 07:13:54 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 07:13:54 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 11565 and the job result is done.
+May 14 07:13:54 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 11565.
+May 14 07:13:54 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 11565.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Total RAM: 1918M.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 07:13:54 cosmic makeswap[6006]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 07:13:54 cosmic makeswap[6006]: no label, UUID=42ed0924-a8e8-4a14-8e2c-ff416469c9bf
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 07:13:54 cosmic makeswap[5975]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 07:13:54 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 11565.
+May 14 07:20:05 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 07:20:05 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 14843 and the job result is done.
+May 14 07:20:05 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 14843.
+May 14 07:20:05 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 14843.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Total RAM: 1918M.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Allocated 1G for /mnt/pagefile
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Set 600 permissions on /mnt/pagefile
+May 14 07:20:05 cosmic makeswap[6957]: Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+May 14 07:20:05 cosmic makeswap[6957]: no label, UUID=8eb4b63e-c7d4-4a55-a42c-de90dbb02d62
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: Recreated swap file /mnt/pagefile
+May 14 07:20:05 cosmic makeswap[6924]: [makeswap-on-azure]: The /mnt/pagefile swap file was enabled as /mnt/pagefile.
+May 14 07:20:05 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 14843.
+May 14 07:58:14 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 14 07:58:14 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 34006 and the job result is done.
+May 14 07:58:14 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 34006.
+May 14 07:58:14 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 34006.
+May 14 07:58:14 cosmic makeswap[13080]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 14 07:58:14 cosmic makeswap[13080]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 14 07:58:14 cosmic makeswap[13082]: touch: cannot touch '/etc/makeswap-on-azure/swap_size': No such file or directory
+May 14 07:58:14 cosmic makeswap[13080]: [makeswap-on-azure]: Failed to create configuration file /etc/makeswap-on-azure/swap_size
+May 14 07:58:14 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 34006.
+May 15 18:27:47 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 15 18:27:47 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 1062724 and the job result is done.
+May 15 18:27:47 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1062724.
+May 15 18:27:47 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1062724.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Total RAM: 1918M.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 15 18:27:47 cosmic makeswap[330790]: fallocate: no filename specified
+May 15 18:27:47 cosmic makeswap[330760]: [makeswap-on-azure]: Failed to allocate 1G to /mnt/pagefile
+May 15 18:27:47 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 1062724.
+May 15 20:53:54 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 15 20:53:54 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 1135647 and the job result is done.
+May 15 20:53:54 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1135647.
+May 15 20:53:54 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1135647.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: /etc/makeswap-on-azure/swap_size is not present or is not set.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Created directory /etc/makeswap-on-azure
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Created /etc/makeswap-on-azure/swap_size to hold swap size configuration.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Calulating appropriate swap size.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Total RAM: 1918M.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: 3728M available disk space on /dev/sda1 (rounding down for safety).
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Calculated swap size of 1G.
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 15 20:53:54 cosmic makeswap[352876]: fallocate: no filename specified
+May 15 20:53:54 cosmic makeswap[352836]: [makeswap-on-azure]: Failed to allocate 1G to /mnt/pagefile
+May 15 20:53:54 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 1135647.
+May 15 20:54:18 cosmic systemd[1]: makeswap-on-azure.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The unit makeswap-on-azure.service has successfully entered the 'dead' state.
+May 15 20:54:18 cosmic systemd[1]: Stopped Makes a swap file on the volitile temp drive.
+-- Subject: A stop job for unit makeswap-on-azure.service has finished
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has finished.
+-- 
+-- The job identifier is 1135899 and the job result is done.
+May 15 20:54:18 cosmic systemd[1]: Stopping Makes a swap file on the volitile temp drive...
+-- Subject: A stop job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A stop job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1135899.
+May 15 20:54:18 cosmic systemd[1]: Starting Makes a swap file on the volitile temp drive...
+-- Subject: A start job for unit makeswap-on-azure.service has begun execution
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has begun execution.
+-- 
+-- The job identifier is 1135899.
+May 15 20:54:18 cosmic makeswap[352996]: [makeswap-on-azure]: Found /etc/makeswap-on-azure/swap_size.
+May 15 20:54:18 cosmic makeswap[352996]: [makeswap-on-azure]: Set the swap size to 1G
+May 15 20:54:18 cosmic makeswap[352996]: [makeswap-on-azure]: chmod ugo+w /etc/makeswap-on-azure/swap_size
+May 15 20:54:18 cosmic makeswap[353000]: fallocate: no filename specified
+May 15 20:54:18 cosmic makeswap[352996]: [makeswap-on-azure]: Failed to allocate 1G to /mnt/pagefile
+May 15 20:54:18 cosmic systemd[1]: Finished Makes a swap file on the volitile temp drive.
+-- Subject: A start job for unit makeswap-on-azure.service has finished successfully
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- A start job for unit makeswap-on-azure.service has finished successfully.
+-- 
+-- The job identifier is 1135899.

@@ -77,6 +77,10 @@ jobs:
         run: journalctl -xe --unit makeswap-on-azure --no-pager > ~/.github/artifacts/test-swapping20-04.journalctl.log
       - name: log to stdout
         run: journalctl -xe --unit makeswap-on-azure --no-pager
+      - name: killswitch-prep
+        run:  count=$(grep -f ~/.github/workflows/exception-strings ~/.github/artifacts/test-swapping20-04.journalctl.log | wc -l)
+      - name: killswitch
+        run:  if  [ ! -z $count ] || [ $count -ge 0 ]; then exit 1; fi 
 
       - uses: actions/upload-artifact@v3
         id: upload
