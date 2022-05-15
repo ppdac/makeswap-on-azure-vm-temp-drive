@@ -73,12 +73,14 @@ jobs:
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: disable
         run: sudo systemctl disable makeswap-on-azure.service
-      - name: jnlctl
-        run: journalctl -xe --unit makeswap-on-azure --no-pager > ~/.github/artifacts/test-swapping20-04.journalctl.log
       - name: log to stdout
         run: journalctl -xe --unit makeswap-on-azure --no-pager
+      - name: killswitch-strings
+        run: wget https://raw.githubusercontent.com/soyfrien/makeswap-on-azure.service/fix-tests/.github/workflows/exception-strings
+      - name: killswitch-log
+        run: journalctl -xe --unit makeswap-on-azure --no-pager > killswitch.log
       - name: killswitch-prep
-        run:  count=$(grep -f makeswap-on-azure.service/.github/workflows/exception-strings ~/.github/artifacts/test-swapping20-04.journalctl.log | wc -l)
+        run:  count=$(grep -f exception-strings killswitch.log | wc -l)
       - name: killswitch
         run:  if  [ ! -z $count ] || [ $count -ge 0 ]; then exit 1; fi 
 
