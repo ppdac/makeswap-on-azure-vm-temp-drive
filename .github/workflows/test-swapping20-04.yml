@@ -40,35 +40,22 @@ jobs:
         run: sudo systemctl enable makeswap-on-azure.service
       - name: START
         run: sudo systemctl start makeswap-on-azure
-      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: Resize => 262120K > /etc/makeswap-on-azure/swap_size
         run: echo 262120K > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure --no-pager -xe
       - name: Resize => 4096.50M > /etc/makeswap-on-azure/swap_size
         run: echo 4096.50M > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-      - name: journalctl --unit makeswap-on-azure.service --no-pager -xe
-        run: journalctl --unit makeswap-on-azure --no-pager -xe
-  
       - name: Resize => 402653184.212344 bytes > /etc/makeswap-on-azure/swap_size
         run: echo 402653184.212344 > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-      - name: journalctl --unit makeswap-on-azure --no-pager -xe
-        run: journalctl --unit makeswap-on-azure.service --no-pager -xe
-  
       - name: Resize => 64.64G > /etc/makeswap-on-azure/swap_size
         run: echo 64.64G > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-      - name: journalctl --unit makeswap-on-azure --no-pager -xe
-        run: journalctl --unit makeswap-on-azure --no-pager -xe
-
       - name: remove
         run: sudo dpkg --remove makeswap-on-azure.service
       - name: disable
@@ -76,7 +63,7 @@ jobs:
       - name: log to stdout
         run: journalctl -xe --unit makeswap-on-azure --no-pager
       - name: killswitch-strings
-        run: wget https://raw.githubusercontent.com/soyfrien/makeswap-on-azure.service/fix-tests/.github/workflows/exception-strings
+        run: wget https://raw.githubusercontent.com/soyfrien/makeswap-on-azure.service/main/.github/workflows/exception-strings
       - name: killswitch-log
         run: journalctl -xe --unit makeswap-on-azure --no-pager > killswitch.log
       - name: killswitch
