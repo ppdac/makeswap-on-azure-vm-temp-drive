@@ -33,6 +33,14 @@ err() {
 commit_swap() {
     local SWAP_SIZE="$1"
 
+    # https://github.com/ppdac/makeswap-on-azure.service/issues/3
+    chmod ugo+w "$PARAMETER_FILE"
+    if (($? == 0)); then
+        logger "chmod ugo+w $PARAMETER_FILE"
+    else
+        err "chmod ugo+w $PARAMETER_FILE failed"
+    fi
+
     local FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4/1024)}')
     if [ $FREE_DISK_SPACE -gt 0 ]; then
         logger "${FREE_DISK_SPACE}M available disk space (rounding down for safety)."
