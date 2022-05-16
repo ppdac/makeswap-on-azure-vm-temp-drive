@@ -20,7 +20,6 @@ err() {
     exit 1
 }
 
-
 #######################################
 # Converts a string to a form that looks like an integer of bytes
 # See https://github.com/soyfrien/makeswap-on-azure.service/issues/16
