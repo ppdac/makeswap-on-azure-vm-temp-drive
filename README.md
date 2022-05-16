@@ -53,7 +53,6 @@ rm ~/git/makeswap-on-azure.service.deb
 
 ## Uninstall
 ```
-sudo systemctl disable makeswap-on-azure.service 
 sudo dpkg --remove makeswap-on-azure
 ```
 
