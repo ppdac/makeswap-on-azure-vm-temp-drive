@@ -33,11 +33,11 @@ human_to_bytestring() {
     local temp="$1"
     
     logger "Begin Github magic."
-    logger "🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄"
+    # 🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄
     logger "End Github magic."
     
     local bytestring="$temp"
-    return bytestring
+    echo "$bytestring"
 }
 
 #######################################
@@ -73,14 +73,16 @@ commit_swap() {
     # If swap_size is in bytes, make sure it is an integer
     if [ "$base" != "G" ] && [ "$base" != "g" ] && [ "$base" != "M" ] && [ "$base" != "m" ] && [ "$base" != "K" ] && [ "$base" != "k" ]; then
         swap_size=$(echo "$swap_size" | gawk '{print int($1)}')
+        logger "swap_size is in bytes and is santized."
     fi
     
     # Get disk space as bytes
+    logger "Getting free disk space as bytes."
     FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4)}')
     logger "Free disk space as bytes: $FREE_DISK_SPACE"
 
     logger "swap_size before conversion: $swap_size"
-    swap_size=human_to_bytestring "$swap_size"
+    swap_size=$(human_to_bytestring "$swap_size")
     logger "swap_size after conversion: $swap_size"
 
     # If this is true it exits returning 1
