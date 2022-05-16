@@ -6,6 +6,7 @@ Failed to remove existing swap file
 Exception in calculate_swap_size
 Exception in commit_swap
 Failed to remove swap file from
+ failed
 Failed to enable the swap file
 Failed to recreate swap file
 Failed to set 600 permissions on

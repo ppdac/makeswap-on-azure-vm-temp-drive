@@ -52,8 +52,8 @@ jobs:
         run: echo 402653184.212344 > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
-      #- name: Resize => 64.64G > /etc/makeswap-on-azure/swap_size
-      #  run: echo 64.64G > /etc/makeswap-on-azure/swap_size
+      - name: Resize => 64.64G > /etc/makeswap-on-azure/swap_size
+        run: echo 64.64G > /etc/makeswap-on-azure/swap_size
       - name: restart
         run: sudo systemctl restart makeswap-on-azure.service
       - name: remove
