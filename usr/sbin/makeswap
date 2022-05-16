@@ -86,7 +86,7 @@ commit_swap() {
     if [[ "$FREE_DISK_SPACE" < "$swap_size" ]]; then
         err "Not enough free disk space."
     else
-        logger "This doesn't actually work until human_to_bytestring is implemented."
+        logger "This doesn't always work, but sometimes does. human_to_bytestring is not implemented."
     fi
 
     fallocate -l "$swap_size" "$SWAP_FILE"
