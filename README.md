@@ -1,5 +1,7 @@
 [![Deployment/Removal on ubuntu-20.04](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy20-04.yml/badge.svg?branch=main)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/deploy20-04.yml) [![.github/workflows/test-swapping20-04.yml](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/test-swapping20-04.yml/badge.svg?branch=main)](https://github.com/soyfrien/makeswap-on-azure.service/actions/workflows/test-swapping20-04.yml)
 
+![Animation showing installation, verification of functionality and removing of the makeswap-on-azure service.](https://github.com/soyfrien/makeswap-on-azure.service/raw/main/.github/makeswap-on-azure.gif)
+
 # Index
 1. [Overview](#makeswap-on-azureservice)
 2. [Usage](#usage)
