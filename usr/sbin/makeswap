@@ -37,7 +37,7 @@ human_to_bytestring() {
     # "End Github magic."
     
     local bytestring="$temp"
-    return $bytestring
+    echo "$bytestring"
 }
 
 
@@ -87,7 +87,7 @@ commit_swap() {
     if [[ "$swap_size" < "$FREE_DISK_SPACE" ]]; then
         err "Not enough free disk space."
     else
-        logger "There is enough free disk space."
+        logger "This doesn't actually work until human_to_bytestring is implemented."
     fi
 
     fallocate -l "$swap_size" "$SWAP_FILE"
