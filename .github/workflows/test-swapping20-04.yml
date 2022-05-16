@@ -65,9 +65,9 @@ jobs:
       - name: killswitch-strings
         run: wget https://raw.githubusercontent.com/soyfrien/makeswap-on-azure.service/main/.github/workflows/exception-strings
       - name: killswitch-log
-        run: journalctl -xe --unit makeswap-on-azure --no-pager > killswitch.log
+        run: journalctl -xe --unit makeswap-on-azure --no-pager > ~/.github/artifacts/killswitch.log
       - name: killswitch
-        run:  count=$(grep -f exception-strings killswitch.log | wc -l); if [[ $count > 0 ]]; then exit 1; fi
+        run:  count=$(grep -f exception-strings ~/.github/artifacts/killswitch.log | wc -l); if [[ $count > 0 ]]; then exit 1; fi
       - uses: actions/upload-artifact@v3
         id: upload
         with:
