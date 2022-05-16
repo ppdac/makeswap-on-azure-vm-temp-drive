@@ -31,7 +31,7 @@ err() {
 #   0 or non-zero on error.
 #######################################
 commit_swap() {
-    local SWAP_SIZE=$(cat $PARAMETER_FILE)
+    local SWAP_SIZE="$1"
 
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$PARAMETER_FILE"
@@ -160,7 +160,7 @@ calculate_swap_size() {
             err "Failed to calculate swap size."
         fi
     fi
-
+    
     logger "Calculated swap size of $(cat $PARAMETER_FILE)."
 }
 
@@ -216,7 +216,7 @@ main() {
         fi
     fi
 
-    commit_swap
+    commit_swap "$SWAP_SIZE"
     if (($? != 0)); then
         err "Exception in commit_swap. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%202"
     fi
