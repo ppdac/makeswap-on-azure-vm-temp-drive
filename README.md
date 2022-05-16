@@ -6,7 +6,7 @@
    - [Install](#install)
    - [Uninstall](#uninstall)
    - [Upgrade](#upgrade)
-3. [Adjust amount of virtual memory](#adjust-amount-of-virtual-memory)
+   - [Adjust amount of virtual memory](#adjust-amount-of-virtual-memory)
 
 
 # makeswap-on-azure.service
