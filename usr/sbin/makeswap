@@ -20,6 +20,26 @@ err() {
     exit 1
 }
 
+
+#######################################
+# Converts a string to a form that looks like an integer of bytes
+# See https://github.com/soyfrien/makeswap-on-azure.service/issues/16
+# Arguments:
+#   human_readable_size
+# Returns:
+#   bytestring
+#######################################
+human_to_bytestring() {
+    local temp="$1"
+    
+    # Begin Github magic.
+    # 🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄
+    # End Github magic.
+    
+    local bytestring="$temp"
+    return bytestring
+}
+
 #######################################
 # Allocates disk space, creates swap file and enables it
 # Globals:
@@ -53,6 +73,16 @@ commit_swap() {
     # If swap_size is in bytes, make sure it is an integer
     if [ "$base" != "G" ] && [ "$base" != "g" ] && [ "$base" != "M" ] && [ "$base" != "m" ] && [ "$base" != "K" ] && [ "$base" != "k" ]; then
         swap_size=$(echo "$swap_size" | gawk '{print int($1)}')
+    fi
+    
+    # Get disk space as bytes
+    FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4)}')
+    
+    swap_size=$(human_to_bytestring "$swap_size")
+    
+    # If this is true it exits returning 1
+    if [[ "$swap_size" < "$FREE_DISK_SPACE" ]]; then
+        err "Not enough free disk space."
     fi
 
     fallocate -l "$swap_size" "$SWAP_FILE"
