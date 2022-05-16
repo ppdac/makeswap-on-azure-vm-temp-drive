@@ -50,7 +50,7 @@ commit_swap() {
 
     base=$(echo "${SWAP_SIZE: -1}")
 
-    if [ "$base" != "G" ]  && [ "$base" != "g" ] && [ "$base" != "M" ]  && [ "$base" != "m" ]; then
+    if [ "$base" != "G" ]  && [ "$base" != "g" ] && [ "$base" != "M" ]  && [ "$base" != "m" && [ "$base" != "K" ]  && [ "$base" != "k" ]; then
         SWAP_SIZE=$(echo "$SWAP_SIZE" | gawk '{print int($1)}')
     fi
 
