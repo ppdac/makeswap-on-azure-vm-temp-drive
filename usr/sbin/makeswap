@@ -80,7 +80,7 @@ commit_swap() {
     logger "Free disk space as bytes: $FREE_DISK_SPACE"
 
     logger "swap_size before conversion: $swap_size"
-    swap_size=$(human_to_bytestring "$swap_size")
+    swap_size=human_to_bytestring "$swap_size"
     logger "swap_size after conversion: $swap_size"
 
     # If this is true it exits returning 1
