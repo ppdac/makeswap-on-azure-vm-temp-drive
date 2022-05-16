@@ -44,7 +44,7 @@ jobs:
       - name: dir permissions
         run: chmod ug+rwx ~/.github/artifacts
       - name: CLONE
-        run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
+        run: git clone --branch 16-req-helper-function-that-converts-swap_size-to-bytes-from-a-human-readable-string-is-required https://github.com/ppdac/makeswap-on-azure.service.git
       - name: BUILD
         run: dpkg-deb --build makeswap-on-azure.service
       - name: INSTALL

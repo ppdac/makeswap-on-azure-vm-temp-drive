@@ -31,7 +31,7 @@ jobs:
       - name: cdz
         run: cd && mkdir git
       - name: clone
-        run: git clone https://github.com/ppdac/makeswap-on-azure.service.git
+        run: git clone --branch 16-req-helper-function-that-converts-swap_size-to-bytes-from-a-human-readable-string-is-required https://github.com/ppdac/makeswap-on-azure.service.git
       - name: build
         run: dpkg-deb --build makeswap-on-azure.service
       - name: INSTALL
