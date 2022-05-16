@@ -28,6 +28,8 @@ Ensures a swapfile exists or is created on the volatile temporary drive in an Az
 ```
 wget https://github.com/ppdac/makeswap-on-azure.service/releases/latest/download/makeswap-on-azure.service.deb
 sudo dpkg --install makeswap-on-azure.service.deb
+sudo systemctl enable makeswap-on-azure.service
+sudo systemctl restart makeswap-on-azure.service
 ```
 
 
