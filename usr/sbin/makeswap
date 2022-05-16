@@ -48,7 +48,7 @@ commit_swap() {
         err "${FREE_DISK_SPACE} bytes is not enough to proceed."
     fi
 
-    base=$(echo "${SWAP_SIZE -1}")
+    base=$(echo "${SWAP_SIZE: -1}")
 
     if [ "$base" != "G" ]  || [ "$base" != "g" ] || [ "$base" != "M" ]  || [ "$base" != "m" ]; then
         SWAP_SIZE=$(echo "$SWAP_SIZE" | gawk '{print int($1)}')
