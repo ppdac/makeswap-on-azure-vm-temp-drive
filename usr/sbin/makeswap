@@ -41,7 +41,7 @@ commit_swap() {
         err "chmod ugo+w $PARAMETER_FILE failed"
     fi
     
-    fallocate -l "$SWAP_SIZE $SWAP_FILE"
+    fallocate -l "$SWAP_SIZE" "$SWAP_FILE"
     if (($? == 0)); then
         logger "Allocated $SWAP_SIZE for $SWAP_FILE"
     else
