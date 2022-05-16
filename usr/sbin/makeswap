@@ -32,13 +32,14 @@ err() {
 human_to_bytestring() {
     local temp="$1"
     
-    logger "Begin Github magic."
+    # "Begin Github magic."
     # 🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄
-    logger "End Github magic."
+    # "End Github magic."
     
     local bytestring="$temp"
-    echo "$bytestring"
+    return $bytestring
 }
+
 
 #######################################
 # Allocates disk space, creates swap file and enables it
@@ -55,9 +56,7 @@ commit_swap() {
 
     # https://github.com/ppdac/makeswap-on-azure.service/issues/3
     chmod ugo+w "$PARAMETER_FILE"
-    if (($? == 0)); then
-        logger "chmod ugo+w $PARAMETER_FILE"
-    else
+    if (($? != 0)); then
         err "chmod ugo+w $PARAMETER_FILE failed"
     fi
 
@@ -77,7 +76,6 @@ commit_swap() {
     fi
     
     # Get disk space as bytes
-    logger "Getting free disk space as bytes."
     FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4)}')
     logger "Free disk space as bytes: $FREE_DISK_SPACE"
 
