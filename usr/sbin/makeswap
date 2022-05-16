@@ -201,18 +201,18 @@ main() {
             err "Failed to create configuration file $PARAMETER_FILE"
         fi
 
-        if [ -f "$SWAP_FILE" ]; then
-            logger "Removing a swap file that is already present."
-            remove_swap
-            if (($? != 0)); then
-                err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
-            fi
-        fi
-
         logger "Calulating appropriate swap size."
         calculate_swap_size
         if (($? != 0)); then
             err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
+        fi
+    fi
+
+    if [ -f "$SWAP_FILE" ]; then
+        logger "Removing a swap file that is already present."
+        remove_swap
+        if (($? != 0)); then
+            err "Failed to remove existing swap file. https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20210"
         fi
     fi
 
