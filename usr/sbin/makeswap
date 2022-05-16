@@ -177,7 +177,7 @@ main() {
         logger "Found $PARAMETER_FILE."
         if [[ ! -z "$PARAMETER_FILE" ]]; then
             # Set the size of swap using the value stored in /etc/makeswap-on-azure/swap_size
-            SWAP_SIZE=$(cat $PARAMETER_FILE)
+            SWAP_SIZE=$(gawk '{ print int($1) }' /etc/makeswap-on-azure/swap_size)
             logger "Set the swap size to $SWAP_SIZE"
         else
             logger "$PARAMETER_FILE is not set."
