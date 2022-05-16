@@ -71,7 +71,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         id: upload
         with:
-          name: artifact20-04
+          name: journalctl-makeswap-on-azure
           path: ~/.github/artifacts
       - name: Display structure of uploaded files
         run: ls -R
