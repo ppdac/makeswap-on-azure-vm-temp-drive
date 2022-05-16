@@ -186,6 +186,7 @@ calculate_swap_size() {
 #   None
 #######################################
 main() {
+    SWAP_SIZE=0
     if [ -f "$PARAMETER_FILE" ]; then
         logger "Found $PARAMETER_FILE."
         if [[ ! -z "$PARAMETER_FILE" ]]; then
@@ -216,6 +217,7 @@ main() {
 
         logger "Calulating appropriate swap size."
         calculate_swap_size
+        SWAP_SIZE=$(cat $PARAMETER_FILE)
         if (($? != 0)); then
             err "Exception in calculate_swap_size. Please report this https://github.com/soyfrien/makeswap-on-azure.service/issues/new?assignees=soyfrien&labels=bug&template=bug_report.md&title=%5BBUG%5D%20Unchecked%20exception%20in%20main%20Line%20217"
         fi
