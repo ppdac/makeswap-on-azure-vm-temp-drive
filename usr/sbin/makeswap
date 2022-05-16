@@ -32,9 +32,9 @@ err() {
 human_to_bytestring() {
     local temp="$1"
     
-    # Begin Github magic.
-    # 🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄
-    # End Github magic.
+    logger "Begin Github magic."
+    logger "🪄🧟‍♀️🧟🧟‍♂️🧙🏽‍♀️🧙🏽🧙🏽‍♂️🤹🏻‍♀️🤹🏿🤹🏼‍♂️🧌🪄"
+    logger "End Github magic."
     
     local bytestring="$temp"
     return bytestring
@@ -77,12 +77,17 @@ commit_swap() {
     
     # Get disk space as bytes
     FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4)}')
-    
+    logger "Free disk space as bytes: $FREE_DISK_SPACE"
+
+    logger "swap_size before conversion: $swap_size"
     swap_size=$(human_to_bytestring "$swap_size")
-    
+    logger "swap_size after conversion: $swap_size"
+
     # If this is true it exits returning 1
     if [[ "$swap_size" < "$FREE_DISK_SPACE" ]]; then
         err "Not enough free disk space."
+    else
+        logger "There is enough free disk space."
     fi
 
     fallocate -l "$swap_size" "$SWAP_FILE"
