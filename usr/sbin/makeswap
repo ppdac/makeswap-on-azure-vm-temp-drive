@@ -75,7 +75,7 @@ commit_swap() {
     fi
     
     # Get disk space as bytes
-    FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4)}')
+    FREE_DISK_SPACE=$(df | grep /mnt | gawk '{print int($4*1024)}')
     logger "Free disk space as bytes: $FREE_DISK_SPACE"
 
     logger "swap_size before conversion: $swap_size"
